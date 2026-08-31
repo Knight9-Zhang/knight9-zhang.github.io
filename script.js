@@ -90,32 +90,33 @@ if (heroName) {
 }
 
 // ══════════════════════════════════════════════════════════
-//  🌗  BLACK & WHITE TOGGLE
+//  🌗  DARK / LIGHT THEME TOGGLE
 // ══════════════════════════════════════════════════════════
 const bwToggle   = document.getElementById('bw-toggle');
 const bwIconSun  = document.getElementById('bw-icon-sun');
 const bwIconMoon = document.getElementById('bw-icon-moon');
 
-let bwActive = localStorage.getItem('bw-mode') === 'true';
+// true = light (white) mode, false = dark (black) mode (default)
+let lightActive = localStorage.getItem('light-mode') === 'true';
 
-function applyBW(state) {
-  document.body.classList.toggle('bw-mode', state);
-  bwToggle.classList.toggle('active', state);
-  // sun icon visible when color mode (click switches to BW)
-  // moon icon visible when BW mode active (click restores color)
-  bwIconSun.style.display  = state ? 'none'         : 'block';
-  bwIconMoon.style.display = state ? 'block'        : 'none';
-  bwToggle.setAttribute('aria-label', state
-    ? 'Switch to color mode'
-    : 'Switch to black and white mode');
+function applyTheme(isLight) {
+  document.body.classList.toggle('light-mode', isLight);
+  bwToggle.classList.toggle('active', isLight);
+  // Sun icon → currently dark, click to go light
+  // Moon icon → currently light, click to go dark
+  bwIconSun.style.display  = isLight ? 'none'  : 'block';
+  bwIconMoon.style.display = isLight ? 'block' : 'none';
+  bwToggle.setAttribute('aria-label', isLight
+    ? '切换为黑色主题 / Switch to dark theme'
+    : '切换为白色主题 / Switch to light theme');
 }
 
-applyBW(bwActive);
+applyTheme(lightActive);
 
 bwToggle.addEventListener('click', () => {
-  bwActive = !bwActive;
-  applyBW(bwActive);
-  localStorage.setItem('bw-mode', bwActive);
+  lightActive = !lightActive;
+  applyTheme(lightActive);
+  localStorage.setItem('light-mode', lightActive);
 });
 
 // ══════════════════════════════════════════════════════════

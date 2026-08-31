@@ -272,12 +272,62 @@ a:hover { color: var(--text-primary); }
   transition: transform var(--transition), opacity var(--transition);
 }
 
-/* ── Black & White Mode ────────────────────────────────────── */
+/* ── Light / White Theme ───────────────────────────────────── */
+/*  Smooth transition for all color tokens                       */
 body {
-  transition: filter 0.4s ease;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
 }
-body.bw-mode {
-  filter: grayscale(1) contrast(1.08);
+
+body.light-mode {
+  /* Backgrounds — warm white → light grey layers */
+  --bg-void:     oklch(98% 0.004 60);
+  --bg-deep:     oklch(95% 0.005 55);
+  --bg-surface:  oklch(91% 0.006 50);
+  --bg-elevated: oklch(87% 0.007 45);
+
+  /* Accent — same blood-red, slightly brighter for light bg */
+  --accent:      oklch(48% 0.24 25);
+  --accent-hot:  oklch(42% 0.26 22);
+  --accent-dim:  oklch(58% 0.18 25);
+  --accent-glow: oklch(50% 0.22 25 / 0.2);
+
+  /* Text — near-black → dark grey → medium grey */
+  --text-primary:   oklch(12% 0.005 30);
+  --text-secondary: oklch(30% 0.008 25);
+  --text-muted:     oklch(50% 0.006 20);
+
+  /* Borders */
+  --border:        oklch(78% 0.008 40);
+  --border-accent: var(--accent);
+
+  /* Shadows */
+  --shadow-red:  0 0 20px oklch(48% 0.24 25 / 0.18);
+  --shadow-card: 0 4px 24px oklch(0% 0 0 / 0.1);
+}
+
+/* Scan-line overlay is too dark on white bg — lighten it */
+body.light-mode::before {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      oklch(0% 0 0 / 0.03) 2px,
+      oklch(0% 0 0 / 0.03) 4px
+    );
+}
+
+/* Hero orb — softer on light bg */
+body.light-mode #hero::before {
+  background: radial-gradient(circle, oklch(50% 0.24 25 / 0.06) 0%, transparent 70%);
+}
+
+/* Avatar border adapts */
+body.light-mode .hero-avatar {
+  filter: contrast(1.05) brightness(1.02);
+  border-color: oklch(78% 0.008 40);
 }
 
 /* ── Hero ──────────────────────────────────────────────────── */
