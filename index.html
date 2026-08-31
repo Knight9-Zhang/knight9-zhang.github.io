@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YiChi Zhang — Researcher &amp; Developer</title>
   <meta name="description" content="YiChi Zhang (张亦弛) — Researcher &amp; Developer, M.S. student in Animal Genetics &amp; Breeding at China Agricultural University, specializing in Bioinformatics." />
   <meta property="og:title" content="YiChi Zhang — Researcher &amp; Developer" />
-  <meta property="og:description" content="M.S. student in Bioinformatics · Animal Genetics · China Agricultural University" />
+  <meta property="og:description" content="M.S. student in Animal Genetics · Bioinformatics · China Agricultural University" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://knight9-zhang.github.io" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ══════════════════ EMAIL MODAL ══════════════════ -->
+  <div id="email-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Contact emails">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <p class="modal-label" data-en="Contact" data-zh="联系方式">Contact</p>
+      <div class="modal-email-row">
+        <span class="modal-email-addr">Knight9.Zhang@gmail.com</span>
+        <button class="copy-btn" data-target="Knight9.Zhang@gmail.com" aria-label="Copy email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span data-en="Copy" data-zh="复制">Copy</span>
+        </button>
+      </div>
+      <div class="modal-email-row">
+        <span class="modal-email-addr">Knight413@qq.com</span>
+        <button class="copy-btn" data-target="Knight413@qq.com" aria-label="Copy email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span data-en="Copy" data-zh="复制">Copy</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- ══════════════════ NAVIGATION ══════════════════ -->
   <nav id="nav" aria-label="Main navigation">
@@ -27,12 +51,9 @@
         <li><a href="#contact"   data-en="Contact"   data-zh="联系">Contact</a></li>
       </ul>
 
-      <!-- ── Utility buttons (right side) ── -->
       <div class="nav-utils">
-
-        <!-- Black &amp; White toggle -->
-        <button id="bw-toggle" class="util-btn" aria-label="Toggle monochrome mode" title="黑白 / 彩色">
-          <!-- Sun icon = currently color, click to go BW -->
+        <!-- Theme toggle: sun = dark mode active (click→light); moon = light mode active (click→dark) -->
+        <button id="bw-toggle" class="util-btn" aria-label="Switch to light theme" title="白色 / 黑色主题">
           <svg id="bw-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="5"/>
@@ -45,7 +66,6 @@
             <line x1="4.22"  y1="19.78" x2="5.64"  y2="18.36"/>
             <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
           </svg>
-          <!-- Half-moon icon = currently BW, click to restore color -->
           <svg id="bw-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -79,33 +99,32 @@
         </h1>
 
         <div class="hero-roles">
-          <span class="role-badge" data-en="Researcher"     data-zh="研究者">Researcher</span>
-          <span class="role-badge" data-en="Developer"      data-zh="开发者">Developer</span>
-          <span class="role-badge" data-en="M.S. Candidate" data-zh="硕士在读">M.S. Candidate</span>
-          <span class="role-badge" data-en="Bioinformatics" data-zh="生物信息学">Bioinformatics</span>
+          <span class="role-badge" data-en="Biologist"         data-zh="生物研究">Biologist</span>
+          <span class="role-badge" data-en="Coding Enthusiast" data-zh="编程爱好者">Coding Enthusiast</span>
+          <span class="role-badge" data-en="Idealist"          data-zh="理想主义者">Idealist</span>
         </div>
 
-        <p class="hero-motto">
-          不积跬步，无以至千里；不积小流，无以成江海。
-        </p>
+        <!-- Motto — Chinese preserved per spec -->
+        <p class="hero-motto">王朝可复亦可覆</p>
 
         <div class="hero-social">
           <a href="https://github.com/Knight9-Zhang" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             GitHub
           </a>
-          <a href="mailto:Knight9.Zhang@gmail.com" class="social-link" aria-label="Email">
+          <!-- Email → opens modal -->
+          <button class="social-link social-btn" id="hero-email-btn" aria-label="Show email">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            Email
-          </a>
+            <span data-en="Email" data-zh="邮箱">Email</span>
+          </button>
         </div>
 
         <div class="hero-actions">
-          <a href="mailto:Knight9.Zhang@gmail.com" class="btn btn-primary"
+          <button class="btn btn-primary" id="hero-contact-btn"
              data-en="Get in Touch" data-zh="联系我">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             Get in Touch
-          </a>
+          </button>
           <a href="#research" class="btn btn-outline"
              data-en="View Research ↓" data-zh="查看科研 ↓">
             View Research ↓
@@ -128,17 +147,17 @@
 
       <div class="about-grid">
         <div class="about-bio reveal">
-          <p data-en="I am &lt;strong&gt;YiChi Zhang (张亦弛)&lt;/strong&gt;, a graduate researcher and developer currently pursuing a Master's degree at &lt;strong&gt;China Agricultural University&lt;/strong&gt;, where I focus on the intersection of animal genetics, breeding, and computational biology."
-             data-zh="我是&lt;strong&gt;张亦弛（YiChi Zhang）&lt;/strong&gt;，目前就读于&lt;strong&gt;中国农业大学&lt;/strong&gt;，攻读动物遗传育种与繁殖专业硕士学位，研究方向为动物遗传学、育种学与计算生物学的交叉领域。">
-            I am <strong>YiChi Zhang (张亦弛)</strong>, a graduate researcher and developer currently pursuing a Master's degree at <strong>China Agricultural University</strong>, where I focus on the intersection of animal genetics, breeding, and computational biology.
+          <p data-en="I am Zhang Yichi, a graduate researcher and developer pursuing a master's degree at China Agricultural University, working at the intersection of animal genetics, breeding, and bioinformatics."
+             data-zh="我是张亦弛，目前就读于中国农业大学，攻读动物遗传育种专业硕士学位，研究方向横跨动物遗传学、育种学与生物信息学。">
+            I am Zhang Yichi, a graduate researcher and developer pursuing a master's degree at China Agricultural University, working at the intersection of animal genetics, breeding, and bioinformatics.
           </p>
-          <p data-en="My research centers on leveraging &lt;strong&gt;bioinformatics approaches&lt;/strong&gt; to unravel the genomic architecture underlying complex traits in livestock and aquatic species. I am passionate about developing computational pipelines that bridge the gap between raw sequencing data and meaningful biological insights."
-             data-zh="我的研究聚焦于利用&lt;strong&gt;生物信息学方法&lt;/strong&gt;解析畜禽及水产物种复杂性状的基因组结构，致力于开发可重复的计算流程，将原始测序数据转化为有意义的生物学洞见。">
-            My research centers on leveraging <strong>bioinformatics approaches</strong> to unravel the genomic architecture underlying complex traits in livestock and aquatic species. I am passionate about developing computational pipelines that bridge the gap between raw sequencing data and meaningful biological insights.
+          <p data-en="My research focuses on genomic and transcriptomic analyses of livestock. Ongoing projects include breed identification of goats and sheep using machine learning, as well as single-cell differential gene expression analysis to dissect the genetic architecture underlying complex traits. I am passionate about building computational pipelines that bridge raw sequencing data and meaningful biological insights."
+             data-zh="我的研究聚焦于畜禽的基因组学与转录组学分析。当前课题包括利用机器学习进行山羊和绵羊品种鉴定，以及通过单细胞差异基因表达分析解析复杂性状的遗传结构。我致力于构建将原始测序数据转化为有意义生物学洞见的计算流程。">
+            My research focuses on genomic and transcriptomic analyses of livestock. Ongoing projects include breed identification of goats and sheep using machine learning, as well as single-cell differential gene expression analysis to dissect the genetic architecture underlying complex traits. I am passionate about building computational pipelines that bridge raw sequencing data and meaningful biological insights.
           </p>
-          <p data-en="Beyond the lab, I enjoy exploring open-source tooling and building software that makes scientific workflows more reproducible and accessible."
+          <p data-en="Outside the lab, I enjoy exploring open-source tools and building software to make scientific workflows more reproducible and accessible."
              data-zh="实验室之外，我热衷于探索开源工具，并开发能让科研工作流更具可重复性和易用性的软件。">
-            Beyond the lab, I enjoy exploring open-source tooling and building software that makes scientific workflows more reproducible and accessible.
+            Outside the lab, I enjoy exploring open-source tools and building software to make scientific workflows more reproducible and accessible.
           </p>
         </div>
 
@@ -151,10 +170,10 @@
               <p class="edu-degree"
                  data-en="M.S. — Animal Genetics &amp; Breeding"
                  data-zh="硕士 — 动物遗传育种与繁殖">M.S. — Animal Genetics &amp; Breeding</p>
-              <p class="edu-school">China Agricultural University · 中国农业大学</p>
+              <p class="edu-school">China Agricultural University</p>
               <p class="edu-field"
-                 data-en="Specialization: Bioinformatics &amp;nbsp;|&amp;nbsp; 2023 – Present"
-                 data-zh="方向：生物信息学 &amp;nbsp;|&amp;nbsp; 2023 – 至今">Specialization: Bioinformatics &nbsp;|&nbsp; 2023 – Present</p>
+                 data-en="Specialization: Animal Genetics &amp; Breeding &nbsp;|&nbsp; 2025 – Present"
+                 data-zh="方向：动物遗传与育种学 &nbsp;|&nbsp; 2025 – 至今">Specialization: Animal Genetics &amp; Breeding &nbsp;|&nbsp; 2025 – Present</p>
             </div>
           </div>
           <div class="edu-item">
@@ -163,10 +182,10 @@
             </div>
             <div class="edu-info">
               <p class="edu-degree"
-                 data-en="B.S. — Animal Science · 动物科学"
-                 data-zh="学士 — 动物科学">B.S. — Animal Science &nbsp;·&nbsp; 动物科学</p>
-              <p class="edu-school">Southwest University · 西南大学</p>
-              <p class="edu-field">2019 – 2023</p>
+                 data-en="B.S. — Animal Science"
+                 data-zh="学士 — 动物科学">B.S. — Animal Science</p>
+              <p class="edu-school">Southwest University</p>
+              <p class="edu-field">2021 – 2025</p>
             </div>
           </div>
         </div>
@@ -187,7 +206,6 @@
           <div class="skill-tags">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">R</span>
-            <span class="skill-tag">Bash / Shell</span>
             <span class="skill-tag">Linux</span>
           </div>
         </div>
@@ -216,7 +234,7 @@
         </div>
 
         <div class="skill-category reveal">
-          <p class="skill-cat-title" data-en="Development" data-zh="开发工具">Development</p>
+          <p class="skill-cat-title" data-en="Learning" data-zh="学习中">Learning</p>
           <div class="skill-tags">
             <span class="skill-tag">Git / GitHub</span>
             <span class="skill-tag">Snakemake</span>
@@ -232,16 +250,96 @@
   <!-- ══════════════════ RESEARCH ══════════════════ -->
   <section id="research" class="section section-alt" aria-label="Research &amp; Publications">
     <div class="container">
-      <p class="section-label reveal" data-en="Publications" data-zh="发表论文">Publications</p>
-      <h2 class="section-title reveal" data-en="Research Output" data-zh="科研成果">Research Output</h2>
+      <p class="section-label reveal" data-en="Publications" data-zh="科研成果">Publications</p>
+      <h2 class="section-title reveal" data-en="Research Output" data-zh="研究产出">Research Output</h2>
       <div class="section-underline reveal"></div>
 
-      <div class="pub-list reveal">
-        <div class="coming-soon-card">
-          <span class="cs-icon">📄</span>
-          <p data-en="Publications are on the way — check back soon."
-             data-zh="论文整理中，敬请期待。">Publications are on the way — check back soon.</p>
+      <div class="pub-list">
+
+        <!-- Paper 1 -->
+        <div class="pub-entry reveal">
+          <div class="pub-meta">
+            <span class="pub-status status-review"
+                  data-en="Under Review" data-zh="在投">Under Review</span>
+            <span class="pub-index">01</span>
+          </div>
+          <div class="pub-body">
+            <p class="pub-title"
+               data-en="Machine learning approaches for goat breed identification using whole-genome sequencing data"
+               data-zh="基于全基因组测序数据的山羊品种识别机器学习方法">
+              Machine learning approaches for goat breed identification using whole-genome sequencing data
+            </p>
+            <p class="pub-note"
+               data-en="Whole-genome SNP data · Machine learning · Breed classification"
+               data-zh="全基因组 SNP · 机器学习 · 品种鉴定">
+              Whole-genome SNP data · Machine learning · Breed classification
+            </p>
+          </div>
         </div>
+
+        <!-- Paper 2 -->
+        <div class="pub-entry reveal">
+          <div class="pub-meta">
+            <span class="pub-status status-progress"
+                  data-en="In Progress" data-zh="进行中">In Progress</span>
+            <span class="pub-index">02</span>
+          </div>
+          <div class="pub-body">
+            <p class="pub-title"
+               data-en="Applications of Additive Genetic Variance in Sheep Populations"
+               data-zh="加性遗传方差在绵羊群体中的运用">
+              Applications of Additive Genetic Variance in Sheep Populations
+            </p>
+            <p class="pub-note"
+               data-en="Quantitative genetics · Variance components · Sheep genomics"
+               data-zh="数量遗传学 · 方差组分 · 绵羊基因组">
+              Quantitative genetics · Variance components · Sheep genomics
+            </p>
+          </div>
+        </div>
+
+        <!-- Paper 3 -->
+        <div class="pub-entry reveal">
+          <div class="pub-meta">
+            <span class="pub-status status-learning"
+                  data-en="Learning" data-zh="学习中">Learning</span>
+            <span class="pub-index">03</span>
+          </div>
+          <div class="pub-body">
+            <p class="pub-title"
+               data-en="Single-Cell Transcriptomic Analysis of Domestic and Wild Sheep and Goats"
+               data-zh="绵羊、山羊与野生绵羊、山羊单细胞分析">
+              Single-Cell Transcriptomic Analysis of Domestic and Wild Sheep and Goats
+            </p>
+            <p class="pub-note"
+               data-en="scRNA-seq · Differential gene expression · Comparative genomics"
+               data-zh="单细胞 RNA 测序 · 差异基因表达 · 比较基因组学">
+              scRNA-seq · Differential gene expression · Comparative genomics
+            </p>
+          </div>
+        </div>
+
+        <!-- Paper 4 -->
+        <div class="pub-entry reveal">
+          <div class="pub-meta">
+            <span class="pub-status status-thesis"
+                  data-en="Thesis" data-zh="毕业课题">Thesis</span>
+            <span class="pub-index">04</span>
+          </div>
+          <div class="pub-body">
+            <p class="pub-title"
+               data-en="Molecular Regulatory Mechanisms of Skeletal Growth and Development in Sheep via Transcriptomics"
+               data-zh="基于转录组学的绵羊骨骼生长发育的分子调控机制研究">
+              Molecular Regulatory Mechanisms of Skeletal Growth and Development in Sheep via Transcriptomics
+            </p>
+            <p class="pub-note"
+               data-en="RNA-seq · Skeletal development · Regulatory networks · Sheep"
+               data-zh="转录组测序 · 骨骼发育 · 调控网络 · 绵羊">
+              RNA-seq · Skeletal development · Regulatory networks · Sheep
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -253,66 +351,135 @@
       <h2 class="section-title reveal" data-en="Projects" data-zh="项目经历">Projects</h2>
       <div class="section-underline reveal"></div>
 
-      <div class="projects-grid">
+      <!-- Category: Genomics -->
+      <div class="proj-category reveal">
+        <h3 class="proj-cat-heading" data-en="Genomics" data-zh="基因组学">Genomics</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="nerv-corner tl"></div>
+            <div class="nerv-corner br"></div>
+            <p class="project-name"
+               data-en="Goat Breed Identification via ML"
+               data-zh="山羊品种机器学习鉴定">Goat Breed Identification via ML</p>
+            <p class="project-desc"
+               data-en="Applying machine learning classifiers to whole-genome SNP data for automated breed identification of goats and sheep populations."
+               data-zh="将机器学习分类器应用于全基因组 SNP 数据，实现山羊和绵羊品种的自动识别。">
+              Applying machine learning classifiers to whole-genome SNP data for automated breed identification of goats and sheep populations.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">WGS</span>
+              <span class="project-tag">ML</span>
+              <span class="project-tag">PLINK</span>
+            </div>
+          </div>
 
-        <div class="project-card reveal">
-          <div class="nerv-corner tl"></div>
-          <div class="nerv-corner br"></div>
-          <p class="project-name"
-             data-en="Genomic Selection Pipeline"
-             data-zh="基因组选择流程">Genomic Selection Pipeline</p>
-          <p class="project-desc"
-             data-en="An end-to-end Snakemake pipeline for genomic prediction and GWAS analysis in livestock populations, integrating QC, imputation, and mixed-model association tests."
-             data-zh="一套用于畜禽群体基因组预测和全基因组关联分析的端到端 Snakemake 流程，集成了质控、填充和混合模型关联检验。">
-            An end-to-end Snakemake pipeline for genomic prediction and GWAS analysis in livestock populations, integrating QC, imputation, and mixed-model association tests.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Snakemake</span>
-            <span class="project-tag">PLINK</span>
-            <span class="project-tag">GWAS</span>
+          <div class="project-card">
+            <div class="nerv-corner tl"></div>
+            <div class="nerv-corner br"></div>
+            <p class="project-name"
+               data-en="Population Structure Analysis"
+               data-zh="群体结构分析">Population Structure Analysis</p>
+            <p class="project-desc"
+               data-en="Comparative population genomics using whole-genome SNP data to investigate admixture patterns, selective sweeps, and demographic history."
+               data-zh="利用全基因组 SNP 数据开展比较群体基因组学研究，探究混合模式、选择清除及历史人口动态。">
+              Comparative population genomics using whole-genome SNP data to investigate admixture patterns, selective sweeps, and demographic history.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">R</span>
+              <span class="project-tag">ADMIXTURE</span>
+              <span class="project-tag">TreeMix</span>
+              <span class="project-tag">vcftools</span>
+            </div>
           </div>
         </div>
-
-        <div class="project-card reveal">
-          <div class="nerv-corner tl"></div>
-          <div class="nerv-corner br"></div>
-          <p class="project-name"
-             data-en="Population Structure Analysis"
-             data-zh="群体结构分析">Population Structure Analysis</p>
-          <p class="project-desc"
-             data-en="Comparative population genomics study using whole-genome SNP data to investigate admixture patterns, selective sweeps, and demographic history."
-             data-zh="利用全基因组 SNP 数据开展比较群体基因组学研究，探究混合模式、选择清除及历史人口动态。">
-            Comparative population genomics study using whole-genome SNP data to investigate admixture patterns, selective sweeps, and demographic history.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">R</span>
-            <span class="project-tag">ADMIXTURE</span>
-            <span class="project-tag">TreeMix</span>
-            <span class="project-tag">vcftools</span>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="nerv-corner tl"></div>
-          <div class="nerv-corner br"></div>
-          <p class="project-name"
-             data-en="Personal Page"
-             data-zh="个人主页">Personal Page</p>
-          <p class="project-desc"
-             data-en="This site — a statically hosted personal academic homepage with an EVA-inspired design, deployed via GitHub Actions to GitHub Pages."
-             data-zh="本站 —— 受 EVA 风格启发设计的静态个人学术主页，通过 GitHub Actions 自动部署至 GitHub Pages。">
-            This site — a statically hosted personal academic homepage with an EVA-inspired design, deployed via GitHub Actions to GitHub Pages.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">HTML</span>
-            <span class="project-tag">CSS</span>
-            <span class="project-tag">JavaScript</span>
-            <span class="project-tag">GitHub Pages</span>
-          </div>
-        </div>
-
       </div>
+
+      <!-- Category: Transcriptomics -->
+      <div class="proj-category reveal">
+        <h3 class="proj-cat-heading" data-en="Transcriptomics" data-zh="转录组学">Transcriptomics</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="nerv-corner tl"></div>
+            <div class="nerv-corner br"></div>
+            <p class="project-name"
+               data-en="Single-Cell Analysis of Sheep &amp; Goats"
+               data-zh="绵羊与山羊单细胞分析">Single-Cell Analysis of Sheep &amp; Goats</p>
+            <p class="project-desc"
+               data-en="Dissecting cell-type-specific gene expression in domestic and wild sheep and goats using single-cell RNA sequencing to uncover complex trait architecture."
+               data-zh="通过单细胞 RNA 测序解析家养与野生绵羊、山羊的细胞类型特异性基因表达，探究复杂性状的遗传结构。">
+              Dissecting cell-type-specific gene expression in domestic and wild sheep and goats using single-cell RNA sequencing to uncover complex trait architecture.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">scRNA-seq</span>
+              <span class="project-tag">R</span>
+              <span class="project-tag">Seurat</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="nerv-corner tl"></div>
+            <div class="nerv-corner br"></div>
+            <p class="project-name"
+               data-en="Skeletal Development in Sheep"
+               data-zh="绵羊骨骼生长发育">Skeletal Development in Sheep</p>
+            <p class="project-desc"
+               data-en="Transcriptomic investigation of the molecular regulatory mechanisms governing skeletal growth and development in sheep — undergraduate thesis project."
+               data-zh="通过转录组学研究绵羊骨骼生长发育的分子调控机制——本科毕业课题。">
+              Transcriptomic investigation of the molecular regulatory mechanisms governing skeletal growth and development in sheep — undergraduate thesis project.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">RNA-seq</span>
+              <span class="project-tag">DEG</span>
+              <span class="project-tag">STAR</span>
+              <span class="project-tag">HISAT2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Programming -->
+      <div class="proj-category reveal">
+        <h3 class="proj-cat-heading" data-en="Programming" data-zh="编程语言">Programming</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="nerv-corner tl"></div>
+            <div class="nerv-corner br"></div>
+            <p class="project-name"
+               data-en="Genomic Selection Pipeline"
+               data-zh="基因组选择流程">Genomic Selection Pipeline</p>
+            <p class="project-desc"
+               data-en="An end-to-end Snakemake pipeline for genomic prediction and GWAS analysis in livestock populations, integrating QC, imputation, and mixed-model association tests."
+               data-zh="用于畜禽群体基因组预测和全基因组关联分析的端到端 Snakemake 流程，集成了质控、填充和混合模型关联检验。">
+              An end-to-end Snakemake pipeline for genomic prediction and GWAS analysis in livestock populations, integrating QC, imputation, and mixed-model association tests.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Snakemake</span>
+              <span class="project-tag">GWAS</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="nerv-corner tl"></div>
+            <div class="nerv-corner br"></div>
+            <p class="project-name"
+               data-en="Personal Page"
+               data-zh="个人主页">Personal Page</p>
+            <p class="project-desc"
+               data-en="This site — an EVA-inspired static academic homepage with dark/light theme, EN/ZH toggle, deployed via GitHub Actions."
+               data-zh="本站 —— EVA 风格的静态学术主页，支持深浅主题与中英切换，通过 GitHub Actions 自动部署。">
+              This site — an EVA-inspired static academic homepage with dark/light theme, EN/ZH toggle, deployed via GitHub Actions.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -323,41 +490,65 @@
       <h2 class="section-title reveal" data-en="Interests" data-zh="兴趣爱好">Interests</h2>
       <div class="section-underline reveal"></div>
 
-      <div class="interests-grid">
-        <div class="interest-item reveal">
-          <span class="interest-emoji" aria-hidden="true">🧬</span>
-          <p class="interest-name" data-en="Genomics"   data-zh="基因组学">Genomics</p>
-          <p class="interest-desc"
-             data-en="Fascinated by how sequence variation shapes phenotype and evolution."
-             data-zh="着迷于序列变异如何塑造表型与进化。">Fascinated by how sequence variation shapes phenotype and evolution.</p>
+      <div class="interests-list">
+        <div class="interest-row reveal">
+          <div class="interest-icon-wrap" aria-hidden="true">🧬</div>
+          <div class="interest-text">
+            <p class="interest-name" data-en="Genomics &amp; Bioinformatics" data-zh="基因组学与生物信息学">Genomics &amp; Bioinformatics</p>
+            <p class="interest-desc"
+               data-en="Fascinated by how sequence variation shapes phenotype and evolution. Drawn to large-scale genomic datasets and the pipelines that make sense of them."
+               data-zh="着迷于序列变异如何塑造表型与进化，沉迷于大规模基因组数据集及其分析流程。">
+              Fascinated by how sequence variation shapes phenotype and evolution. Drawn to large-scale genomic datasets and the pipelines that make sense of them.
+            </p>
+          </div>
         </div>
-        <div class="interest-item reveal">
-          <span class="interest-emoji" aria-hidden="true">🤖</span>
-          <p class="interest-name" data-en="AI &amp; ML" data-zh="人工智能">AI &amp; ML</p>
-          <p class="interest-desc"
-             data-en="Exploring deep learning applications in biological sequence analysis."
-             data-zh="探索深度学习在生物序列分析中的应用。">Exploring deep learning applications in biological sequence analysis.</p>
+
+        <div class="interest-row reveal">
+          <div class="interest-icon-wrap" aria-hidden="true">🤖</div>
+          <div class="interest-text">
+            <p class="interest-name" data-en="AI &amp; Machine Learning" data-zh="人工智能与机器学习">AI &amp; Machine Learning</p>
+            <p class="interest-desc"
+               data-en="Exploring how deep learning and classical ML methods can accelerate biological discovery — from breed classification to gene expression prediction."
+               data-zh="探索深度学习和经典机器学习方法如何加速生物学发现——从品种分类到基因表达预测。">
+              Exploring how deep learning and classical ML methods can accelerate biological discovery — from breed classification to gene expression prediction.
+            </p>
+          </div>
         </div>
-        <div class="interest-item reveal">
-          <span class="interest-emoji" aria-hidden="true">📺</span>
-          <p class="interest-name" data-en="Anime" data-zh="动漫">Anime</p>
-          <p class="interest-desc"
-             data-en="Neon Genesis Evangelion, Steins;Gate, and other classics."
-             data-zh="新世纪福音战士、命运石之门及其他经典作品。">Neon Genesis Evangelion, Steins;Gate, and other classics.</p>
+
+        <div class="interest-row reveal">
+          <div class="interest-icon-wrap" aria-hidden="true">📺</div>
+          <div class="interest-text">
+            <p class="interest-name" data-en="Anime" data-zh="动漫">Anime</p>
+            <p class="interest-desc"
+               data-en="Neon Genesis Evangelion, Steins;Gate, and other classics that blend philosophy with narrative ambition."
+               data-zh="新世纪福音战士、命运石之门，以及其他兼具哲学思考与叙事野心的经典作品。">
+              Neon Genesis Evangelion, Steins;Gate, and other classics that blend philosophy with narrative ambition.
+            </p>
+          </div>
         </div>
-        <div class="interest-item reveal">
-          <span class="interest-emoji" aria-hidden="true">💻</span>
-          <p class="interest-name" data-en="Open Source" data-zh="开源">Open Source</p>
-          <p class="interest-desc"
-             data-en="Building and contributing to reproducible science tooling."
-             data-zh="构建并贡献于可重复科研工具链。">Building and contributing to reproducible science tooling.</p>
+
+        <div class="interest-row reveal">
+          <div class="interest-icon-wrap" aria-hidden="true">💻</div>
+          <div class="interest-text">
+            <p class="interest-name" data-en="Open Source &amp; Tooling" data-zh="开源与工具开发">Open Source &amp; Tooling</p>
+            <p class="interest-desc"
+               data-en="Building reproducible workflows and contributing to open-source scientific software. Believe that good tooling is foundational to good science."
+               data-zh="构建可重复工作流并贡献于开源科学软件。相信优秀的工具是优秀科学的基础。">
+              Building reproducible workflows and contributing to open-source scientific software. Believe that good tooling is foundational to good science.
+            </p>
+          </div>
         </div>
-        <div class="interest-item reveal">
-          <span class="interest-emoji" aria-hidden="true">📚</span>
-          <p class="interest-name" data-en="Reading" data-zh="阅读">Reading</p>
-          <p class="interest-desc"
-             data-en="Science, history of biology, and science fiction."
-             data-zh="科学、生物学史与科幻小说。">Science, history of biology, and science fiction.</p>
+
+        <div class="interest-row reveal">
+          <div class="interest-icon-wrap" aria-hidden="true">📚</div>
+          <div class="interest-text">
+            <p class="interest-name" data-en="Reading" data-zh="阅读">Reading</p>
+            <p class="interest-desc"
+               data-en="Science, history of biology, philosophy of science, and speculative fiction — particularly works that challenge how we understand complexity and life."
+               data-zh="科学读物、生物学史、科学哲学与思辨性科幻——尤其是那些挑战我们对复杂性与生命认知的作品。">
+              Science, history of biology, philosophy of science, and speculative fiction — particularly works that challenge how we understand complexity and life.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -373,21 +564,14 @@
       <p class="reveal"
          data-en="Whether it's research, open-source, or just to say hello — feel free to reach out."
          data-zh="无论是科研合作、开源项目，还是只是打个招呼——随时欢迎联系。">Whether it's research, open-source, or just to say hello — feel free to reach out.</p>
-      <div class="hero-actions" style="justify-content:center" role="list">
-        <a href="mailto:Knight9.Zhang@gmail.com" class="btn btn-primary">
+      <div class="hero-actions" style="justify-content:center">
+        <button class="btn btn-primary" id="contact-email-btn"
+                data-en="Get in Touch" data-zh="联系我">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          Knight9.Zhang@gmail.com
-        </a>
-      </div>
-      <div class="contact-emails reveal">
-        <a href="mailto:Knight413@qq.com" class="email-link">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          Knight413@qq.com
-        </a>
-        <a href="https://github.com/Knight9-Zhang" target="_blank" rel="noopener" class="email-link">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          Knight9-Zhang
-        </a>
+          Get in Touch
+        </button>
+        <a href="https://github.com/Knight9-Zhang" target="_blank" rel="noopener" class="btn btn-outline"
+           data-en="GitHub Profile" data-zh="GitHub 主页">GitHub Profile</a>
       </div>
     </div>
   </section>
@@ -401,7 +585,7 @@
               data-zh="用 ♥ 构建，部署于 GitHub Pages">Built with ♥ and deployed on GitHub Pages</span>
       </p>
       <p class="footer-copy" style="font-size:0.65rem; opacity:0.5;">
-        不积跬步，无以至千里
+        王朝可复亦可覆
       </p>
     </div>
   </footer>
