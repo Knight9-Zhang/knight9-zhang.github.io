@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YiChi Zhang — Researcher & Developer</title>
-  <meta name="description" content="YiChi Zhang (张亦弛) — Researcher & Developer, M.S. student in Animal Genetics & Breeding at China Agricultural University, specializing in Bioinformatics." />
-  <meta property="og:title" content="YiChi Zhang — Researcher & Developer" />
+  <title>YiChi Zhang — Researcher &amp; Developer</title>
+  <meta name="description" content="YiChi Zhang (张亦弛) — Researcher &amp; Developer, M.S. student in Animal Genetics &amp; Breeding at China Agricultural University, specializing in Bioinformatics." />
+  <meta property="og:title" content="YiChi Zhang — Researcher &amp; Developer" />
   <meta property="og:description" content="M.S. student in Bioinformatics · Animal Genetics · China Agricultural University" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://knight9-zhang.github.io" />
@@ -18,16 +18,50 @@
   <nav id="nav" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="#hero" class="nav-logo">YZ<span>.</span></a>
+
       <ul class="nav-links" id="nav-links" role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about"     data-en="About"     data-zh="关于">About</a></li>
+        <li><a href="#research"  data-en="Research"  data-zh="科研">Research</a></li>
+        <li><a href="#projects"  data-en="Projects"  data-zh="项目">Projects</a></li>
+        <li><a href="#interests" data-en="Interests" data-zh="兴趣">Interests</a></li>
+        <li><a href="#contact"   data-en="Contact"   data-zh="联系">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-        <span></span><span></span><span></span>
-      </button>
+
+      <!-- ── Utility buttons (right side) ── -->
+      <div class="nav-utils">
+
+        <!-- Black &amp; White toggle -->
+        <button id="bw-toggle" class="util-btn" aria-label="Toggle monochrome mode" title="黑白 / 彩色">
+          <!-- Sun icon = currently color, click to go BW -->
+          <svg id="bw-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1"  x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22"   x2="5.64"  y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1"  y1="12" x2="3"  y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22"  y1="19.78" x2="5.64"  y2="18.36"/>
+            <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Half-moon icon = currently BW, click to restore color -->
+          <svg id="bw-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- Language toggle -->
+        <button id="lang-toggle" class="util-btn lang-btn" aria-label="Switch language" title="EN / 中文">
+          <span id="lang-label">中文</span>
+        </button>
+
+        <!-- Mobile hamburger -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -35,16 +69,20 @@
   <section id="hero" aria-label="Introduction">
     <div class="container hero-inner">
       <div class="hero-content">
-        <p class="hero-tag">Knight9-Zhang · Personal Site</p>
+        <p class="hero-tag"
+           data-en="Knight9-Zhang · Personal Site"
+           data-zh="Knight9-Zhang · 个人主页">Knight9-Zhang · Personal Site</p>
+
         <h1 class="hero-name">
           YiChi Zhang
           <em>张亦弛</em>
         </h1>
+
         <div class="hero-roles">
-          <span class="role-badge">Researcher</span>
-          <span class="role-badge">Developer</span>
-          <span class="role-badge">M.S. Candidate</span>
-          <span class="role-badge">Bioinformatics</span>
+          <span class="role-badge" data-en="Researcher"     data-zh="研究者">Researcher</span>
+          <span class="role-badge" data-en="Developer"      data-zh="开发者">Developer</span>
+          <span class="role-badge" data-en="M.S. Candidate" data-zh="硕士在读">M.S. Candidate</span>
+          <span class="role-badge" data-en="Bioinformatics" data-zh="生物信息学">Bioinformatics</span>
         </div>
 
         <p class="hero-motto">
@@ -52,12 +90,10 @@
         </p>
 
         <div class="hero-social">
-          <!-- GitHub -->
           <a href="https://github.com/Knight9-Zhang" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             GitHub
           </a>
-          <!-- Email -->
           <a href="mailto:Knight9.Zhang@gmail.com" class="social-link" aria-label="Email">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             Email
@@ -65,11 +101,13 @@
         </div>
 
         <div class="hero-actions">
-          <a href="mailto:Knight9.Zhang@gmail.com" class="btn btn-primary">
+          <a href="mailto:Knight9.Zhang@gmail.com" class="btn btn-primary"
+             data-en="Get in Touch" data-zh="联系我">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             Get in Touch
           </a>
-          <a href="#research" class="btn btn-outline">
+          <a href="#research" class="btn btn-outline"
+             data-en="View Research ↓" data-zh="查看科研 ↓">
             View Research ↓
           </a>
         </div>
@@ -84,19 +122,22 @@
   <!-- ══════════════════ ABOUT ══════════════════ -->
   <section id="about" class="section section-alt" aria-label="About">
     <div class="container">
-      <p class="section-label reveal">About Me</p>
-      <h2 class="section-title reveal">Background &amp; Education</h2>
+      <p class="section-label reveal" data-en="About Me" data-zh="关于我">About Me</p>
+      <h2 class="section-title reveal" data-en="Background &amp; Education" data-zh="背景与教育经历">Background &amp; Education</h2>
       <div class="section-underline reveal"></div>
 
       <div class="about-grid">
         <div class="about-bio reveal">
-          <p>
+          <p data-en="I am &lt;strong&gt;YiChi Zhang (张亦弛)&lt;/strong&gt;, a graduate researcher and developer currently pursuing a Master's degree at &lt;strong&gt;China Agricultural University&lt;/strong&gt;, where I focus on the intersection of animal genetics, breeding, and computational biology."
+             data-zh="我是&lt;strong&gt;张亦弛（YiChi Zhang）&lt;/strong&gt;，目前就读于&lt;strong&gt;中国农业大学&lt;/strong&gt;，攻读动物遗传育种与繁殖专业硕士学位，研究方向为动物遗传学、育种学与计算生物学的交叉领域。">
             I am <strong>YiChi Zhang (张亦弛)</strong>, a graduate researcher and developer currently pursuing a Master's degree at <strong>China Agricultural University</strong>, where I focus on the intersection of animal genetics, breeding, and computational biology.
           </p>
-          <p>
+          <p data-en="My research centers on leveraging &lt;strong&gt;bioinformatics approaches&lt;/strong&gt; to unravel the genomic architecture underlying complex traits in livestock and aquatic species. I am passionate about developing computational pipelines that bridge the gap between raw sequencing data and meaningful biological insights."
+             data-zh="我的研究聚焦于利用&lt;strong&gt;生物信息学方法&lt;/strong&gt;解析畜禽及水产物种复杂性状的基因组结构，致力于开发可重复的计算流程，将原始测序数据转化为有意义的生物学洞见。">
             My research centers on leveraging <strong>bioinformatics approaches</strong> to unravel the genomic architecture underlying complex traits in livestock and aquatic species. I am passionate about developing computational pipelines that bridge the gap between raw sequencing data and meaningful biological insights.
           </p>
-          <p>
+          <p data-en="Beyond the lab, I enjoy exploring open-source tooling and building software that makes scientific workflows more reproducible and accessible."
+             data-zh="实验室之外，我热衷于探索开源工具，并开发能让科研工作流更具可重复性和易用性的软件。">
             Beyond the lab, I enjoy exploring open-source tooling and building software that makes scientific workflows more reproducible and accessible.
           </p>
         </div>
@@ -107,9 +148,13 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
             </div>
             <div class="edu-info">
-              <p class="edu-degree">M.S. — Animal Genetics &amp; Breeding</p>
+              <p class="edu-degree"
+                 data-en="M.S. — Animal Genetics &amp; Breeding"
+                 data-zh="硕士 — 动物遗传育种与繁殖">M.S. — Animal Genetics &amp; Breeding</p>
               <p class="edu-school">China Agricultural University · 中国农业大学</p>
-              <p class="edu-field">Specialization: Bioinformatics &nbsp;|&nbsp; 2023 – Present</p>
+              <p class="edu-field"
+                 data-en="Specialization: Bioinformatics &amp;nbsp;|&amp;nbsp; 2023 – Present"
+                 data-zh="方向：生物信息学 &amp;nbsp;|&amp;nbsp; 2023 – 至今">Specialization: Bioinformatics &nbsp;|&nbsp; 2023 – Present</p>
             </div>
           </div>
           <div class="edu-item">
@@ -117,7 +162,9 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
             </div>
             <div class="edu-info">
-              <p class="edu-degree">B.S. — Animal Science &nbsp;·&nbsp; 动物科学</p>
+              <p class="edu-degree"
+                 data-en="B.S. — Animal Science · 动物科学"
+                 data-zh="学士 — 动物科学">B.S. — Animal Science &nbsp;·&nbsp; 动物科学</p>
               <p class="edu-school">Southwest University · 西南大学</p>
               <p class="edu-field">2019 – 2023</p>
             </div>
@@ -130,14 +177,13 @@
   <!-- ══════════════════ SKILLS ══════════════════ -->
   <section class="section" aria-label="Skills">
     <div class="container">
-      <p class="section-label reveal">Technical Stack</p>
-      <h2 class="section-title reveal">Skills &amp; Tools</h2>
+      <p class="section-label reveal" data-en="Technical Stack" data-zh="技术栈">Technical Stack</p>
+      <h2 class="section-title reveal" data-en="Skills &amp; Tools" data-zh="技能与工具">Skills &amp; Tools</h2>
       <div class="section-underline reveal"></div>
 
       <div class="skills-grid">
-
         <div class="skill-category reveal">
-          <p class="skill-cat-title">Programming</p>
+          <p class="skill-cat-title" data-en="Programming" data-zh="编程语言">Programming</p>
           <div class="skill-tags">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">R</span>
@@ -147,7 +193,7 @@
         </div>
 
         <div class="skill-category reveal">
-          <p class="skill-cat-title">Bioinformatics</p>
+          <p class="skill-cat-title" data-en="Bioinformatics" data-zh="生物信息学">Bioinformatics</p>
           <div class="skill-tags">
             <span class="skill-tag">GATK</span>
             <span class="skill-tag">BLAST</span>
@@ -159,10 +205,10 @@
         </div>
 
         <div class="skill-category reveal">
-          <p class="skill-cat-title">Data &amp; Statistics</p>
+          <p class="skill-cat-title" data-en="Data &amp; Statistics" data-zh="数据与统计">Data &amp; Statistics</p>
           <div class="skill-tags">
             <span class="skill-tag">GWAS</span>
-            <span class="skill-tag">Population Genetics</span>
+            <span class="skill-tag" data-en="Population Genetics" data-zh="群体遗传学">Population Genetics</span>
             <span class="skill-tag">Pandas</span>
             <span class="skill-tag">ggplot2</span>
             <span class="skill-tag">Seaborn</span>
@@ -170,7 +216,7 @@
         </div>
 
         <div class="skill-category reveal">
-          <p class="skill-cat-title">Development</p>
+          <p class="skill-cat-title" data-en="Development" data-zh="开发工具">Development</p>
           <div class="skill-tags">
             <span class="skill-tag">Git / GitHub</span>
             <span class="skill-tag">Snakemake</span>
@@ -179,23 +225,22 @@
             <span class="skill-tag">HPC / Slurm</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- ══════════════════ RESEARCH ══════════════════ -->
-  <section id="research" class="section section-alt" aria-label="Research & Publications">
+  <section id="research" class="section section-alt" aria-label="Research &amp; Publications">
     <div class="container">
-      <p class="section-label reveal">Publications</p>
-      <h2 class="section-title reveal">Research Output</h2>
+      <p class="section-label reveal" data-en="Publications" data-zh="发表论文">Publications</p>
+      <h2 class="section-title reveal" data-en="Research Output" data-zh="科研成果">Research Output</h2>
       <div class="section-underline reveal"></div>
 
       <div class="pub-list reveal">
-        <!-- Placeholder publication — replace with real data -->
         <div class="coming-soon-card">
           <span class="cs-icon">📄</span>
-          <p>Publications are on the way — check back soon.</p>
+          <p data-en="Publications are on the way — check back soon."
+             data-zh="论文整理中，敬请期待。">Publications are on the way — check back soon.</p>
         </div>
       </div>
     </div>
@@ -204,8 +249,8 @@
   <!-- ══════════════════ PROJECTS ══════════════════ -->
   <section id="projects" class="section" aria-label="Projects">
     <div class="container">
-      <p class="section-label reveal">Portfolio</p>
-      <h2 class="section-title reveal">Projects</h2>
+      <p class="section-label reveal" data-en="Portfolio" data-zh="作品集">Portfolio</p>
+      <h2 class="section-title reveal" data-en="Projects" data-zh="项目经历">Projects</h2>
       <div class="section-underline reveal"></div>
 
       <div class="projects-grid">
@@ -213,8 +258,12 @@
         <div class="project-card reveal">
           <div class="nerv-corner tl"></div>
           <div class="nerv-corner br"></div>
-          <p class="project-name">Genomic Selection Pipeline</p>
-          <p class="project-desc">
+          <p class="project-name"
+             data-en="Genomic Selection Pipeline"
+             data-zh="基因组选择流程">Genomic Selection Pipeline</p>
+          <p class="project-desc"
+             data-en="An end-to-end Snakemake pipeline for genomic prediction and GWAS analysis in livestock populations, integrating QC, imputation, and mixed-model association tests."
+             data-zh="一套用于畜禽群体基因组预测和全基因组关联分析的端到端 Snakemake 流程，集成了质控、填充和混合模型关联检验。">
             An end-to-end Snakemake pipeline for genomic prediction and GWAS analysis in livestock populations, integrating QC, imputation, and mixed-model association tests.
           </p>
           <div class="project-tags">
@@ -228,8 +277,12 @@
         <div class="project-card reveal">
           <div class="nerv-corner tl"></div>
           <div class="nerv-corner br"></div>
-          <p class="project-name">Population Structure Analysis</p>
-          <p class="project-desc">
+          <p class="project-name"
+             data-en="Population Structure Analysis"
+             data-zh="群体结构分析">Population Structure Analysis</p>
+          <p class="project-desc"
+             data-en="Comparative population genomics study using whole-genome SNP data to investigate admixture patterns, selective sweeps, and demographic history."
+             data-zh="利用全基因组 SNP 数据开展比较群体基因组学研究，探究混合模式、选择清除及历史人口动态。">
             Comparative population genomics study using whole-genome SNP data to investigate admixture patterns, selective sweeps, and demographic history.
           </p>
           <div class="project-tags">
@@ -243,8 +296,12 @@
         <div class="project-card reveal">
           <div class="nerv-corner tl"></div>
           <div class="nerv-corner br"></div>
-          <p class="project-name">Personal Page</p>
-          <p class="project-desc">
+          <p class="project-name"
+             data-en="Personal Page"
+             data-zh="个人主页">Personal Page</p>
+          <p class="project-desc"
+             data-en="This site — a statically hosted personal academic homepage with an EVA-inspired design, deployed via GitHub Actions to GitHub Pages."
+             data-zh="本站 —— 受 EVA 风格启发设计的静态个人学术主页，通过 GitHub Actions 自动部署至 GitHub Pages。">
             This site — a statically hosted personal academic homepage with an EVA-inspired design, deployed via GitHub Actions to GitHub Pages.
           </p>
           <div class="project-tags">
@@ -262,35 +319,45 @@
   <!-- ══════════════════ INTERESTS ══════════════════ -->
   <section id="interests" class="section section-alt" aria-label="Interests">
     <div class="container">
-      <p class="section-label reveal">Beyond Research</p>
-      <h2 class="section-title reveal">Interests</h2>
+      <p class="section-label reveal" data-en="Beyond Research" data-zh="业余爱好">Beyond Research</p>
+      <h2 class="section-title reveal" data-en="Interests" data-zh="兴趣爱好">Interests</h2>
       <div class="section-underline reveal"></div>
 
       <div class="interests-grid">
         <div class="interest-item reveal">
           <span class="interest-emoji" aria-hidden="true">🧬</span>
-          <p class="interest-name">Genomics</p>
-          <p class="interest-desc">Fascinated by how sequence variation shapes phenotype and evolution.</p>
+          <p class="interest-name" data-en="Genomics"   data-zh="基因组学">Genomics</p>
+          <p class="interest-desc"
+             data-en="Fascinated by how sequence variation shapes phenotype and evolution."
+             data-zh="着迷于序列变异如何塑造表型与进化。">Fascinated by how sequence variation shapes phenotype and evolution.</p>
         </div>
         <div class="interest-item reveal">
           <span class="interest-emoji" aria-hidden="true">🤖</span>
-          <p class="interest-name">AI &amp; ML</p>
-          <p class="interest-desc">Exploring deep learning applications in biological sequence analysis.</p>
+          <p class="interest-name" data-en="AI &amp; ML" data-zh="人工智能">AI &amp; ML</p>
+          <p class="interest-desc"
+             data-en="Exploring deep learning applications in biological sequence analysis."
+             data-zh="探索深度学习在生物序列分析中的应用。">Exploring deep learning applications in biological sequence analysis.</p>
         </div>
         <div class="interest-item reveal">
           <span class="interest-emoji" aria-hidden="true">📺</span>
-          <p class="interest-name">Anime</p>
-          <p class="interest-desc">Neon Genesis Evangelion, Steins;Gate, and other classics.</p>
+          <p class="interest-name" data-en="Anime" data-zh="动漫">Anime</p>
+          <p class="interest-desc"
+             data-en="Neon Genesis Evangelion, Steins;Gate, and other classics."
+             data-zh="新世纪福音战士、命运石之门及其他经典作品。">Neon Genesis Evangelion, Steins;Gate, and other classics.</p>
         </div>
         <div class="interest-item reveal">
           <span class="interest-emoji" aria-hidden="true">💻</span>
-          <p class="interest-name">Open Source</p>
-          <p class="interest-desc">Building and contributing to reproducible science tooling.</p>
+          <p class="interest-name" data-en="Open Source" data-zh="开源">Open Source</p>
+          <p class="interest-desc"
+             data-en="Building and contributing to reproducible science tooling."
+             data-zh="构建并贡献于可重复科研工具链。">Building and contributing to reproducible science tooling.</p>
         </div>
         <div class="interest-item reveal">
           <span class="interest-emoji" aria-hidden="true">📚</span>
-          <p class="interest-name">Reading</p>
-          <p class="interest-desc">Science, history of biology, and science fiction.</p>
+          <p class="interest-name" data-en="Reading" data-zh="阅读">Reading</p>
+          <p class="interest-desc"
+             data-en="Science, history of biology, and science fiction."
+             data-zh="科学、生物学史与科幻小说。">Science, history of biology, and science fiction.</p>
         </div>
       </div>
     </div>
@@ -299,9 +366,13 @@
   <!-- ══════════════════ CONTACT ══════════════════ -->
   <section id="contact" class="section contact-banner" aria-label="Contact">
     <div class="container">
-      <p class="section-label reveal" style="justify-content:center">Let's Connect</p>
-      <h2 class="reveal">Open to Collaboration</h2>
-      <p class="reveal">Whether it's research, open-source, or just to say hello — feel free to reach out.</p>
+      <p class="section-label reveal" style="justify-content:center"
+         data-en="Let's Connect" data-zh="保持联系">Let's Connect</p>
+      <h2 class="reveal"
+          data-en="Open to Collaboration" data-zh="期待合作">Open to Collaboration</h2>
+      <p class="reveal"
+         data-en="Whether it's research, open-source, or just to say hello — feel free to reach out."
+         data-zh="无论是科研合作、开源项目，还是只是打个招呼——随时欢迎联系。">Whether it's research, open-source, or just to say hello — feel free to reach out.</p>
       <div class="hero-actions" style="justify-content:center" role="list">
         <a href="mailto:Knight9.Zhang@gmail.com" class="btn btn-primary">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -325,7 +396,9 @@
   <footer>
     <div class="container footer-inner">
       <p class="footer-copy">
-        © 2026 <span>YiChi Zhang</span> · Built with ♥ and deployed on GitHub Pages
+        © 2026 <span>YiChi Zhang</span> ·
+        <span data-en="Built with ♥ and deployed on GitHub Pages"
+              data-zh="用 ♥ 构建，部署于 GitHub Pages">Built with ♥ and deployed on GitHub Pages</span>
       </p>
       <p class="footer-copy" style="font-size:0.65rem; opacity:0.5;">
         不积跬步，无以至千里

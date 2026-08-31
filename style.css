@@ -206,6 +206,54 @@ a:hover { color: var(--text-primary); }
   width: 100%;
 }
 
+/* Nav utils group */
+.nav-utils {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Utility icon buttons */
+.util-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+  flex-shrink: 0;
+  padding: 0;
+}
+.util-btn svg {
+  width: 15px;
+  height: 15px;
+}
+.util-btn:hover {
+  border-color: var(--accent-dim);
+  color: var(--accent-hot);
+  background: oklch(50% 0.24 25 / 0.08);
+}
+.util-btn.active {
+  border-color: var(--accent);
+  color: var(--accent-hot);
+  background: oklch(50% 0.24 25 / 0.12);
+}
+
+/* Language button */
+.lang-btn {
+  width: auto;
+  padding: 0 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
 /* Hamburger */
 .nav-toggle {
   display: none;
@@ -222,6 +270,14 @@ a:hover { color: var(--text-primary); }
   height: 2px;
   background: var(--text-primary);
   transition: transform var(--transition), opacity var(--transition);
+}
+
+/* ── Black & White Mode ────────────────────────────────────── */
+body {
+  transition: filter 0.4s ease;
+}
+body.bw-mode {
+  filter: grayscale(1) contrast(1.08);
 }
 
 /* ── Hero ──────────────────────────────────────────────────── */

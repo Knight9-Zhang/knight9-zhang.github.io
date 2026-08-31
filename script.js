@@ -19,7 +19,6 @@ navToggle.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', open);
 });
 
-// Close mobile nav on link click
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
@@ -32,10 +31,11 @@ const revealElements = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Stagger siblings within the same parent
-        const siblings = Array.from(entry.target.parentElement.querySelectorAll('.reveal:not(.visible)'));
+        const siblings = Array.from(
+          entry.target.parentElement.querySelectorAll('.reveal:not(.visible)')
+        );
         const index = siblings.indexOf(entry.target);
         setTimeout(() => {
           entry.target.classList.add('visible');
@@ -50,7 +50,7 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach(el => revealObserver.observe(el));
 
 // ── Active nav link on scroll ──────────────────────────────
-const sections = document.querySelectorAll('section[id]');
+const sections   = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
 const sectionObserver = new IntersectionObserver(
@@ -60,8 +60,7 @@ const sectionObserver = new IntersectionObserver(
         const id = entry.target.getAttribute('id');
         navAnchors.forEach(a => {
           a.style.color = a.getAttribute('href') === `#${id}`
-            ? 'var(--accent-hot)'
-            : '';
+            ? 'var(--accent-hot)' : '';
         });
       }
     });
@@ -72,7 +71,6 @@ const sectionObserver = new IntersectionObserver(
 sections.forEach(s => sectionObserver.observe(s));
 
 // ── Typed cursor on hero name ──────────────────────────────
-// Small decorative blinking cursor after name
 const heroName = document.querySelector('.hero-name');
 if (heroName) {
   const cursor = document.createElement('span');
@@ -85,23 +83,74 @@ if (heroName) {
     margin-left: 6px;
     animation: blink 1.2s step-end infinite;
   `;
-  // Insert cursor style
   const style = document.createElement('style');
-  style.textContent = `
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-  `;
+  style.textContent = `@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }`;
   document.head.appendChild(style);
   heroName.appendChild(cursor);
 }
 
-// ── Skill tag hover ripple (lightweight) ──────────────────
-document.querySelectorAll('.skill-tag').forEach(tag => {
-  tag.addEventListener('mouseenter', function () {
-    this.style.setProperty('--ripple', '1');
+// ══════════════════════════════════════════════════════════
+//  🌗  BLACK & WHITE TOGGLE
+// ══════════════════════════════════════════════════════════
+const bwToggle   = document.getElementById('bw-toggle');
+const bwIconSun  = document.getElementById('bw-icon-sun');
+const bwIconMoon = document.getElementById('bw-icon-moon');
+
+let bwActive = localStorage.getItem('bw-mode') === 'true';
+
+function applyBW(state) {
+  document.body.classList.toggle('bw-mode', state);
+  bwToggle.classList.toggle('active', state);
+  // sun icon visible when color mode (click switches to BW)
+  // moon icon visible when BW mode active (click restores color)
+  bwIconSun.style.display  = state ? 'none'         : 'block';
+  bwIconMoon.style.display = state ? 'block'        : 'none';
+  bwToggle.setAttribute('aria-label', state
+    ? 'Switch to color mode'
+    : 'Switch to black and white mode');
+}
+
+applyBW(bwActive);
+
+bwToggle.addEventListener('click', () => {
+  bwActive = !bwActive;
+  applyBW(bwActive);
+  localStorage.setItem('bw-mode', bwActive);
+});
+
+// ══════════════════════════════════════════════════════════
+//  🌐  LANGUAGE TOGGLE  (EN ↔ 中文)
+// ══════════════════════════════════════════════════════════
+const langToggle = document.getElementById('lang-toggle');
+const langLabel  = document.getElementById('lang-label');
+
+let lang = localStorage.getItem('lang') || 'en';
+
+/**
+ * For each element that has both data-en and data-zh attributes,
+ * set its innerHTML to the translation for the current language.
+ * Elements without a data-zh keep their original content.
+ */
+function applyLang(l) {
+  document.documentElement.lang = l === 'zh' ? 'zh-CN' : 'en';
+  langLabel.textContent = l === 'zh' ? 'EN' : '中文';
+  langToggle.classList.toggle('active', l === 'zh');
+
+  document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+    const text = l === 'zh' ? el.dataset.zh : el.dataset.en;
+    if (text !== undefined) {
+      // Use innerHTML so tags like <strong> inside the strings render
+      el.innerHTML = text;
+    }
   });
+}
+
+applyLang(lang);
+
+langToggle.addEventListener('click', () => {
+  lang = lang === 'en' ? 'zh' : 'en';
+  applyLang(lang);
+  localStorage.setItem('lang', lang);
 });
 
 // ── Console Easter egg ────────────────────────────────────
