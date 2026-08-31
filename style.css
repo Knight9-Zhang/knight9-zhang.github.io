@@ -589,60 +589,73 @@ html[data-theme="light"] .hero-avatar {
 
 .pub-entry {
   display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 0;
+  grid-template-columns: 56px 1fr;
+  gap: 1.5rem;
   padding: 1.75rem 0;
   border-bottom: 1px solid var(--border);
+  align-items: flex-start;
   transition: background var(--transition);
 }
 .pub-entry:first-child { border-top: 1px solid var(--border); }
 .pub-entry:hover { background: oklch(50% 0.24 25 / 0.03); }
 
-.pub-meta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  padding-right: 1.5rem;
-  padding-top: 0.15rem;
-}
 .pub-index {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: var(--border);
   line-height: 1;
   letter-spacing: -0.02em;
+  padding-top: 0.15rem;
+  user-select: none;
 }
+
+.pub-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.pub-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
 .pub-status {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.2rem 0.55rem;
+  padding: 0.25rem 0.65rem;
   border-radius: 99px;
   border: 1px solid;
   white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
 }
 .status-review  { color: oklch(62% 0.22 22); border-color: oklch(62% 0.22 22 / 0.5); background: oklch(62% 0.22 22 / 0.08); }
 .status-progress{ color: oklch(65% 0.18 200); border-color: oklch(65% 0.18 200 / 0.5); background: oklch(65% 0.18 200 / 0.08); }
 .status-learning{ color: oklch(68% 0.16 280); border-color: oklch(68% 0.16 280 / 0.5); background: oklch(68% 0.16 280 / 0.08); }
 .status-thesis  { color: oklch(70% 0.14 140); border-color: oklch(70% 0.14 140 / 0.5); background: oklch(70% 0.14 140 / 0.08); }
 
-.pub-body { padding-left: 0; }
-.pub-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  line-height: 1.5;
-  margin-bottom: 0.5rem;
-}
 .pub-note {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   font-family: var(--font-mono);
   letter-spacing: 0.03em;
+  margin: 0;
 }
 
 /* ── Projects with categories ──────────────────────────────── */
@@ -948,6 +961,8 @@ footer {
   .nav-toggle { display: flex; }
   .projects-grid { grid-template-columns: 1fr; }
   .footer-inner { justify-content: center; text-align: center; }
-  .pub-entry { grid-template-columns: 70px 1fr; }
-  .pub-index { font-size: 1.2rem; }
+  .pub-entry { grid-template-columns: 44px 1fr; gap: 1rem; }
+  .pub-index { font-size: 1.4rem; }
+  .pub-header { flex-direction: column; gap: 0.4rem; }
 }
+
