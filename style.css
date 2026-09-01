@@ -261,7 +261,7 @@ a:hover { color: var(--text-primary); }
 }
 .nav-links a {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -314,7 +314,7 @@ a:hover { color: var(--text-primary); }
   width: auto;
   padding: 0 0.65rem;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
@@ -382,7 +382,7 @@ a:hover { color: var(--text-primary); }
 }
 .hero-tag {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent-hot);
@@ -420,7 +420,7 @@ a:hover { color: var(--text-primary); }
 }
 .role-badge {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -433,7 +433,7 @@ a:hover { color: var(--text-primary); }
 
 .hero-motto {
   font-family: var(--font-body);
-  font-size: 1.22rem;
+  font-size: 1.14rem;
   color: var(--text-secondary);
   font-style: italic;
   margin-bottom: 2rem;
@@ -455,7 +455,7 @@ a:hover { color: var(--text-primary); }
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -530,7 +530,7 @@ html[data-theme="light"] .hero-avatar {
   align-items: center;
   gap: 0.45rem;
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   color: var(--text-muted);
   transition: color var(--transition);
@@ -554,7 +554,7 @@ html[data-theme="light"] .hero-avatar {
   gap: 4rem;
   align-items: start;
 }
-.about-bio { font-size: 1.2rem; color: var(--text-secondary); line-height: 1.85; }
+.about-bio { font-size: 1.12rem; color: var(--text-secondary); line-height: 1.85; }
 .about-bio p + p { margin-top: 1rem; }
 .about-bio strong { color: var(--text-primary); font-weight: 600; }
 
@@ -602,14 +602,14 @@ html[data-theme="light"] .edu-icon {
 .edu-info { flex: 1; }
 .edu-degree {
   font-family: var(--font-display);
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
 }
-.edu-school { font-size: 1.02rem; color: var(--accent-hot); margin-bottom: 0.2rem; font-weight: 500; }
-.edu-field { font-size: 0.95rem; color: var(--text-muted); font-family: var(--font-mono); letter-spacing: 0.04em; }
+.edu-school { font-size: 0.95rem; color: var(--accent-hot); margin-bottom: 0.2rem; font-weight: 500; }
+.edu-field { font-size: 0.88rem; color: var(--text-muted); font-family: var(--font-mono); letter-spacing: 0.04em; }
 
 /* ── Skills ────────────────────────────────────────────────── */
 .skills-grid {
@@ -632,7 +632,7 @@ html[data-theme="light"] .edu-icon {
 }
 .skill-cat-title {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -647,7 +647,7 @@ html[data-theme="light"] .edu-icon {
 .skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .skill-tag {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   padding: 0.3rem 0.75rem;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
@@ -716,7 +716,7 @@ html[data-theme="light"] .edu-icon {
 
 .pub-status {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -733,7 +733,7 @@ html[data-theme="light"] .edu-icon {
 .status-thesis  { color: oklch(70% 0.14 140); border-color: oklch(70% 0.14 140 / 0.5); background: oklch(70% 0.14 140 / 0.08); }
 
 .pub-note {
-  font-size: 0.96rem;
+  font-size: 0.89rem;
   color: var(--text-muted);
   font-family: var(--font-mono);
   letter-spacing: 0.03em;
@@ -811,7 +811,7 @@ html[data-theme="light"] .edu-icon {
   color: var(--text-primary);
 }
 .project-desc {
-  font-size: 1.02rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.65;
   flex: 1;
@@ -819,7 +819,7 @@ html[data-theme="light"] .edu-icon {
 .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.25rem; }
 .project-tag {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
   padding: 0.2rem 0.6rem;
   border-radius: 99px;
@@ -865,7 +865,7 @@ html[data-theme="light"] .edu-icon {
   margin-bottom: 0.45rem;
 }
 .interest-desc {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   color: var(--text-secondary);
   line-height: 1.7;
 }
@@ -884,7 +884,7 @@ html[data-theme="light"] .edu-icon {
   pointer-events: none;
 }
 .contact-banner h2 { font-size: clamp(1.68rem, 3.2vw, 2.38rem); font-weight: normal; letter-spacing: 0.08em; line-height: 1.35; margin-bottom: 1rem; }
-.contact-banner > .container > p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.15rem; }
+.contact-banner > .container > p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.08rem; }
 
 /* ── Email Modal ───────────────────────────────────────────── */
 .modal-overlay {
@@ -932,7 +932,7 @@ html[data-theme="light"] .edu-icon {
 .modal-close svg { width: 18px; height: 18px; }
 .modal-label {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -953,7 +953,7 @@ html[data-theme="light"] .edu-icon {
 .modal-email-row:last-child { margin-bottom: 0; }
 .modal-email-addr {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: var(--text-primary);
   letter-spacing: 0.03em;
   user-select: all;
@@ -963,7 +963,7 @@ html[data-theme="light"] .edu-icon {
   align-items: center;
   gap: 0.35rem;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1004,7 +1004,7 @@ footer {
 }
 .footer-copy {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   letter-spacing: 0.08em;
   color: var(--text-muted);
 }
