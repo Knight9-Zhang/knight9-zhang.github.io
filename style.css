@@ -48,7 +48,7 @@
   --transition-slow: 0.5s  cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Chinese Typography (Headings: 卓特悦动黑 | Body: 微软雅黑) ────── */
+/* ── Chinese Typography (Headings: 卓特悦动黑 不加粗 | Body: 微软雅黑) ────── */
 html[lang="zh-CN"],
 html[lang="zh-CN"] body,
 html[lang="zh-CN"] button,
@@ -65,11 +65,17 @@ html[lang="zh-CN"] .section-label,
 html[lang="zh-CN"] .hero-name,
 html[lang="zh-CN"] .proj-cat-heading,
 html[lang="zh-CN"] .project-name,
-html[lang="zh-CN"] .interest-name {
+html[lang="zh-CN"] .interest-name,
+html[lang="zh-CN"] .pub-title,
+html[lang="zh-CN"] .contact-banner h2 {
   font-family: 'Orbitron', 'ZhuoTeYueDongHei', '卓特悦动黑', "Microsoft YaHei", "微软雅黑", sans-serif;
   font-weight: normal;
   letter-spacing: 0.1em;
   line-height: 1.4;
+}
+html[lang="zh-CN"] .hero-name em {
+  font-weight: normal;
+  letter-spacing: 0.22em;
 }
 html[lang="zh-CN"] .nav-links a,
 html[lang="zh-CN"] .lang-btn,
@@ -180,7 +186,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-display);
   line-height: 1.35;
   letter-spacing: 0.08em;
-  font-weight: normal;
+  font-weight: 700;
 }
 a { color: var(--accent-hot); text-decoration: none; transition: color var(--transition); }
 a:hover { color: var(--text-primary); }
@@ -198,7 +204,7 @@ a:hover { color: var(--text-primary); }
   gap: 0.75rem;
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  font-weight: normal;
+  font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent-hot);
@@ -214,7 +220,7 @@ a:hover { color: var(--text-primary); }
 }
 .section-title {
   font-size: clamp(1.78rem, 3.2vw, 2.58rem);
-  font-weight: normal;
+  font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 1.35;
   color: var(--text-primary);
@@ -395,7 +401,7 @@ a:hover { color: var(--text-primary); }
 
 .hero-name {
   font-size: clamp(2.95rem, 7.2vw, 5.65rem);
-  font-weight: normal;
+  font-weight: 900;
   color: var(--text-primary);
   letter-spacing: 0.08em;
   line-height: 1.25;
@@ -406,7 +412,7 @@ a:hover { color: var(--text-primary); }
   font-style: normal;
   font-size: 0.44em;
   font-family: var(--font-body);
-  font-weight: normal;
+  font-weight: 300;
   color: var(--text-muted);
   letter-spacing: 0.22em;
   margin-top: 0.65rem;
@@ -706,7 +712,7 @@ html[data-theme="light"] .edu-icon {
 
 .pub-title {
   font-size: 1.15rem;
-  font-weight: normal;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1.6;
   letter-spacing: 0.03em;
@@ -747,7 +753,7 @@ html[data-theme="light"] .edu-icon {
 .proj-cat-heading {
   font-family: var(--font-display);
   font-size: 0.92rem;
-  font-weight: normal;
+  font-weight: 700;
   letter-spacing: 0.22em;
   line-height: 1.4;
   text-transform: uppercase;
@@ -805,7 +811,7 @@ html[data-theme="light"] .edu-icon {
 .project-name {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: normal;
+  font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 1.35;
   color: var(--text-primary);
@@ -858,7 +864,7 @@ html[data-theme="light"] .edu-icon {
 .interest-name {
   font-family: var(--font-display);
   font-size: 0.96rem;
-  font-weight: normal;
+  font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 1.35;
   color: var(--text-primary);
@@ -883,7 +889,7 @@ html[data-theme="light"] .edu-icon {
   background: radial-gradient(ellipse 60% 80% at 50% 100%, oklch(50% 0.24 25 / 0.08), transparent);
   pointer-events: none;
 }
-.contact-banner h2 { font-size: clamp(1.68rem, 3.2vw, 2.38rem); font-weight: normal; letter-spacing: 0.08em; line-height: 1.35; margin-bottom: 1rem; }
+.contact-banner h2 { font-size: clamp(1.68rem, 3.2vw, 2.38rem); font-weight: 700; letter-spacing: 0.08em; line-height: 1.35; margin-bottom: 1rem; }
 .contact-banner > .container > p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.08rem; }
 
 /* ── Email Modal ───────────────────────────────────────────── */
