@@ -48,13 +48,13 @@
   --transition-slow: 0.5s  cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Chinese Typography (优设于飞特健康体 & 字号放大 2pt) ───────── */
+/* ── Chinese Typography (Latin first, YouSheYuFeiTe for Chinese characters) ─ */
 html[lang="zh-CN"],
 html[lang="zh-CN"] body,
 html[lang="zh-CN"] button,
 html[lang="zh-CN"] input,
 html[lang="zh-CN"] textarea {
-  font-family: 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
+  font-family: 'Space Grotesk', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
 }
 html[lang="zh-CN"] h1,
 html[lang="zh-CN"] h2,
@@ -62,63 +62,42 @@ html[lang="zh-CN"] h3,
 html[lang="zh-CN"] h4 {
   font-family: 'Orbitron', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", sans-serif;
 }
-html[lang="zh-CN"] .section-title,
-html[lang="zh-CN"] .section-label,
-html[lang="zh-CN"] .hero-motto,
+html[lang="zh-CN"] .nav-links a,
+html[lang="zh-CN"] .lang-btn,
+html[lang="zh-CN"] .hero-tag,
 html[lang="zh-CN"] .hero-roles .role-badge,
-html[lang="zh-CN"] .about-bio,
-html[lang="zh-CN"] .edu-degree,
-html[lang="zh-CN"] .edu-school,
+html[lang="zh-CN"] .social-link,
+html[lang="zh-CN"] .social-btn,
+html[lang="zh-CN"] .btn,
+html[lang="zh-CN"] .section-label,
 html[lang="zh-CN"] .edu-field,
 html[lang="zh-CN"] .skill-cat-title,
 html[lang="zh-CN"] .skill-tag,
-html[lang="zh-CN"] .pub-title,
+html[lang="zh-CN"] .pub-index,
 html[lang="zh-CN"] .pub-note,
 html[lang="zh-CN"] .pub-status,
-html[lang="zh-CN"] .proj-cat-heading,
-html[lang="zh-CN"] .project-name,
-html[lang="zh-CN"] .project-desc,
-html[lang="zh-CN"] .interest-name,
-html[lang="zh-CN"] .interest-desc,
+html[lang="zh-CN"] .project-tag,
 html[lang="zh-CN"] .footer-copy,
 html[lang="zh-CN"] .modal-label,
+html[lang="zh-CN"] .modal-email-addr,
 html[lang="zh-CN"] .copy-btn {
-  font-family: 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
+  font-family: 'Space Mono', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", monospace;
 }
-
-/* 2pt (+2.67px / approx +0.15rem) size bump for elements in Chinese */
-html[lang="zh-CN"] .section-title { font-size: clamp(1.78rem, 3.2vw, 2.58rem); }
-html[lang="zh-CN"] .hero-name em { font-size: 0.44em; }
-html[lang="zh-CN"] .contact-banner h2 { font-size: clamp(1.68rem, 3.2vw, 2.38rem); }
-html[lang="zh-CN"] .nav-links a { font-size: 0.85rem; }
-html[lang="zh-CN"] .lang-btn { font-size: 0.8rem; }
-html[lang="zh-CN"] .hero-tag { font-size: 0.85rem; }
-html[lang="zh-CN"] .hero-roles .role-badge { font-size: 0.82rem; }
-html[lang="zh-CN"] .hero-motto { font-size: 1.22rem; }
-html[lang="zh-CN"] .social-link,
-html[lang="zh-CN"] .social-btn { font-size: 0.82rem; }
-html[lang="zh-CN"] .btn { font-size: 0.85rem; }
-html[lang="zh-CN"] .section-label { font-size: 0.85rem; }
-html[lang="zh-CN"] .about-bio { font-size: 1.2rem; }
-html[lang="zh-CN"] .edu-degree { font-size: 0.92rem; }
-html[lang="zh-CN"] .edu-school { font-size: 1.02rem; }
-html[lang="zh-CN"] .edu-field { font-size: 0.95rem; }
-html[lang="zh-CN"] .skill-cat-title { font-size: 0.82rem; }
-html[lang="zh-CN"] .skill-tag { font-size: 0.85rem; }
-html[lang="zh-CN"] .pub-title { font-size: 1.15rem; }
-html[lang="zh-CN"] .pub-note { font-size: 0.96rem; }
-html[lang="zh-CN"] .pub-status { font-size: 0.75rem; }
-html[lang="zh-CN"] .proj-cat-heading { font-size: 0.92rem; }
-html[lang="zh-CN"] .project-name { font-size: 1.05rem; }
-html[lang="zh-CN"] .project-desc { font-size: 1.02rem; }
-html[lang="zh-CN"] .project-tag { font-size: 0.78rem; }
-html[lang="zh-CN"] .interest-name { font-size: 0.96rem; }
-html[lang="zh-CN"] .interest-desc { font-size: 1.05rem; }
-html[lang="zh-CN"] .contact-banner > .container > p { font-size: 1.15rem; }
-html[lang="zh-CN"] .footer-copy { font-size: 0.85rem; }
-html[lang="zh-CN"] .modal-label { font-size: 0.82rem; }
-html[lang="zh-CN"] .modal-email-addr { font-size: 0.95rem; }
-html[lang="zh-CN"] .copy-btn { font-size: 0.78rem; }
+html[lang="zh-CN"] .about-bio,
+html[lang="zh-CN"] .hero-motto,
+html[lang="zh-CN"] .edu-degree,
+html[lang="zh-CN"] .edu-school,
+html[lang="zh-CN"] .pub-title,
+html[lang="zh-CN"] .project-desc,
+html[lang="zh-CN"] .interest-desc,
+html[lang="zh-CN"] .contact-banner > .container > p {
+  font-family: 'Space Grotesk', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+html[lang="zh-CN"] .proj-cat-heading,
+html[lang="zh-CN"] .project-name,
+html[lang="zh-CN"] .interest-name {
+  font-family: 'Orbitron', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", sans-serif;
+}
 
 /* ── Light / White Theme ───────────────────────────────────── */
 html[data-theme="light"] {
@@ -215,7 +194,7 @@ a:hover { color: var(--text-primary); }
   align-items: center;
   gap: 0.75rem;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -230,7 +209,7 @@ a:hover { color: var(--text-primary); }
   background: var(--accent);
 }
 .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.78rem, 3.2vw, 2.58rem);
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
@@ -262,7 +241,7 @@ a:hover { color: var(--text-primary); }
 }
 .nav-logo {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.12rem;
   font-weight: 900;
   color: var(--text-primary);
   letter-spacing: 0.08em;
@@ -275,7 +254,7 @@ a:hover { color: var(--text-primary); }
 }
 .nav-links a {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -328,7 +307,7 @@ a:hover { color: var(--text-primary); }
   width: auto;
   padding: 0 0.65rem;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
@@ -396,7 +375,7 @@ a:hover { color: var(--text-primary); }
 }
 .hero-tag {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent-hot);
@@ -408,7 +387,7 @@ a:hover { color: var(--text-primary); }
 .hero-tag::before { content: ''; width: 32px; height: 1px; background: var(--accent); }
 
 .hero-name {
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-size: clamp(2.95rem, 7.2vw, 5.65rem);
   font-weight: 900;
   color: var(--text-primary);
   letter-spacing: 0.03em;
@@ -418,7 +397,7 @@ a:hover { color: var(--text-primary); }
 .hero-name em {
   display: block;
   font-style: normal;
-  font-size: 0.38em;
+  font-size: 0.44em;
   font-family: var(--font-body);
   font-weight: 300;
   color: var(--text-muted);
@@ -434,7 +413,7 @@ a:hover { color: var(--text-primary); }
 }
 .role-badge {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -447,7 +426,7 @@ a:hover { color: var(--text-primary); }
 
 .hero-motto {
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 1.22rem;
   color: var(--text-secondary);
   font-style: italic;
   margin-bottom: 2rem;
@@ -469,7 +448,7 @@ a:hover { color: var(--text-primary); }
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -544,7 +523,7 @@ html[data-theme="light"] .hero-avatar {
   align-items: center;
   gap: 0.45rem;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   letter-spacing: 0.1em;
   color: var(--text-muted);
   transition: color var(--transition);
@@ -568,7 +547,7 @@ html[data-theme="light"] .hero-avatar {
   gap: 4rem;
   align-items: start;
 }
-.about-bio { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.85; }
+.about-bio { font-size: 1.2rem; color: var(--text-secondary); line-height: 1.85; }
 .about-bio p + p { margin-top: 1rem; }
 .about-bio strong { color: var(--text-primary); font-weight: 600; }
 
@@ -616,14 +595,14 @@ html[data-theme="light"] .edu-icon {
 .edu-info { flex: 1; }
 .edu-degree {
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
 }
-.edu-school { font-size: 0.88rem; color: var(--accent-hot); margin-bottom: 0.2rem; font-weight: 500; }
-.edu-field { font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono); letter-spacing: 0.04em; }
+.edu-school { font-size: 1.02rem; color: var(--accent-hot); margin-bottom: 0.2rem; font-weight: 500; }
+.edu-field { font-size: 0.95rem; color: var(--text-muted); font-family: var(--font-mono); letter-spacing: 0.04em; }
 
 /* ── Skills ────────────────────────────────────────────────── */
 .skills-grid {
@@ -646,7 +625,7 @@ html[data-theme="light"] .edu-icon {
 }
 .skill-cat-title {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -661,7 +640,7 @@ html[data-theme="light"] .edu-icon {
 .skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .skill-tag {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   padding: 0.3rem 0.75rem;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
@@ -719,7 +698,7 @@ html[data-theme="light"] .edu-icon {
 }
 
 .pub-title {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.5;
@@ -729,7 +708,7 @@ html[data-theme="light"] .edu-icon {
 
 .pub-status {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -746,7 +725,7 @@ html[data-theme="light"] .edu-icon {
 .status-thesis  { color: oklch(70% 0.14 140); border-color: oklch(70% 0.14 140 / 0.5); background: oklch(70% 0.14 140 / 0.08); }
 
 .pub-note {
-  font-size: 0.82rem;
+  font-size: 0.96rem;
   color: var(--text-muted);
   font-family: var(--font-mono);
   letter-spacing: 0.03em;
@@ -759,7 +738,7 @@ html[data-theme="light"] .edu-icon {
 
 .proj-cat-heading {
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -816,13 +795,13 @@ html[data-theme="light"] .edu-icon {
 
 .project-name {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: 0.05em;
 }
 .project-desc {
-  font-size: 0.88rem;
+  font-size: 1.02rem;
   color: var(--text-secondary);
   line-height: 1.65;
   flex: 1;
@@ -830,7 +809,7 @@ html[data-theme="light"] .edu-icon {
 .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.25rem; }
 .project-tag {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.78rem;
   letter-spacing: 0.08em;
   padding: 0.2rem 0.6rem;
   border-radius: 99px;
@@ -868,14 +847,14 @@ html[data-theme="light"] .edu-icon {
 .interest-text { flex: 1; }
 .interest-name {
   font-family: var(--font-display);
-  font-size: 0.82rem;
+  font-size: 0.96rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--text-primary);
   margin-bottom: 0.35rem;
 }
 .interest-desc {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
   line-height: 1.7;
 }
@@ -893,8 +872,8 @@ html[data-theme="light"] .edu-icon {
   background: radial-gradient(ellipse 60% 80% at 50% 100%, oklch(50% 0.24 25 / 0.08), transparent);
   pointer-events: none;
 }
-.contact-banner h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 0.75rem; }
-.contact-banner > .container > p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1rem; }
+.contact-banner h2 { font-size: clamp(1.68rem, 3.2vw, 2.38rem); margin-bottom: 0.75rem; }
+.contact-banner > .container > p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.15rem; }
 
 /* ── Email Modal ───────────────────────────────────────────── */
 .modal-overlay {
@@ -942,7 +921,7 @@ html[data-theme="light"] .edu-icon {
 .modal-close svg { width: 18px; height: 18px; }
 .modal-label {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -963,7 +942,7 @@ html[data-theme="light"] .edu-icon {
 .modal-email-row:last-child { margin-bottom: 0; }
 .modal-email-addr {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   color: var(--text-primary);
   letter-spacing: 0.03em;
   user-select: all;
@@ -973,7 +952,7 @@ html[data-theme="light"] .edu-icon {
   align-items: center;
   gap: 0.35rem;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1014,7 +993,7 @@ footer {
 }
 .footer-copy {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   letter-spacing: 0.08em;
   color: var(--text-muted);
 }
