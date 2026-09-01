@@ -4,6 +4,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
+/* ── Custom Font: 站酷高端黑 (ZCOOL Gaoduanhei) ─────────────── */
+@font-face {
+  font-family: 'ZCOOL Gaoduanhei';
+  src: url('fonts/zcool-gaoduanhei.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ── Design Tokens (Dark — default) ───────────────────────── */
 :root {
   --bg-void:     oklch(5% 0.008 10);
@@ -24,9 +33,9 @@
   --border:        oklch(22% 0.015 12);
   --border-accent: var(--accent);
 
-  --font-display: 'Orbitron', "Microsoft YaHei", "微软雅黑", monospace;
-  --font-body:    'Space Grotesk', "Microsoft YaHei", "微软雅黑", sans-serif;
-  --font-mono:    'Space Mono', "Microsoft YaHei", "微软雅黑", monospace;
+  --font-display: 'Orbitron', 'ZCOOL Gaoduanhei', '站酷高端黑', "Microsoft YaHei", monospace;
+  --font-body:    'Space Grotesk', 'ZCOOL Gaoduanhei', '站酷高端黑', "Microsoft YaHei", sans-serif;
+  --font-mono:    'Space Mono', 'ZCOOL Gaoduanhei', '站酷高端黑', "Microsoft YaHei", monospace;
 
   --radius-sm: 2px;
   --radius:    4px;
@@ -39,19 +48,19 @@
   --transition-slow: 0.5s  cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Chinese Typography (微软雅黑) ────────────────────────── */
+/* ── Chinese Typography (站酷高端黑) ────────────────────────── */
 html[lang="zh-CN"],
 html[lang="zh-CN"] body,
 html[lang="zh-CN"] button,
 html[lang="zh-CN"] input,
 html[lang="zh-CN"] textarea {
-  font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
+  font-family: 'ZCOOL Gaoduanhei', '站酷高端黑', "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
 }
 html[lang="zh-CN"] h1,
 html[lang="zh-CN"] h2,
 html[lang="zh-CN"] h3,
 html[lang="zh-CN"] h4 {
-  font-family: 'Orbitron', "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-family: 'Orbitron', 'ZCOOL Gaoduanhei', '站酷高端黑', "Microsoft YaHei", "微软雅黑", sans-serif;
 }
 html[lang="zh-CN"] .section-title,
 html[lang="zh-CN"] .section-label,
@@ -73,7 +82,7 @@ html[lang="zh-CN"] .interest-desc,
 html[lang="zh-CN"] .footer-copy,
 html[lang="zh-CN"] .modal-label,
 html[lang="zh-CN"] .copy-btn {
-  font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
+  font-family: 'ZCOOL Gaoduanhei', '站酷高端黑', "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
 }
 
 /* ── Light / White Theme ───────────────────────────────────── */
