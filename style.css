@@ -67,6 +67,9 @@ html[lang="zh-CN"] .proj-cat-heading,
 html[lang="zh-CN"] .project-name,
 html[lang="zh-CN"] .interest-name {
   font-family: 'Orbitron', 'ZhuoTeYueDongHei', '卓特悦动黑', "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
 }
 html[lang="zh-CN"] .nav-links a,
 html[lang="zh-CN"] .lang-btn,
@@ -175,9 +178,9 @@ html[data-theme="light"] body::before {
 /* ── Typography ────────────────────────────────────────────── */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  font-weight: normal;
 }
 a { color: var(--accent-hot); text-decoration: none; transition: color var(--transition); }
 a:hover { color: var(--text-primary); }
@@ -195,11 +198,12 @@ a:hover { color: var(--text-primary); }
   gap: 0.75rem;
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-weight: normal;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent-hot);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.35;
 }
 .section-label::before {
   content: '';
@@ -210,14 +214,17 @@ a:hover { color: var(--text-primary); }
 }
 .section-title {
   font-size: clamp(1.78rem, 3.2vw, 2.58rem);
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 .section-underline {
   width: 48px;
   height: 2px;
   background: var(--accent);
-  margin-bottom: 3rem;
+  margin-bottom: 3.25rem;
 }
 
 /* ── Navigation ────────────────────────────────────────────── */
@@ -388,21 +395,21 @@ a:hover { color: var(--text-primary); }
 
 .hero-name {
   font-size: clamp(2.95rem, 7.2vw, 5.65rem);
-  font-weight: 900;
+  font-weight: normal;
   color: var(--text-primary);
-  letter-spacing: 0.03em;
-  line-height: 1;
-  margin-bottom: 0.25rem;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
 }
 .hero-name em {
   display: block;
   font-style: normal;
   font-size: 0.44em;
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: normal;
   color: var(--text-muted);
-  letter-spacing: 0.15em;
-  margin-top: 0.4em;
+  letter-spacing: 0.22em;
+  margin-top: 0.65rem;
 }
 
 .hero-roles {
@@ -699,9 +706,10 @@ html[data-theme="light"] .edu-icon {
 
 .pub-title {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: normal;
   color: var(--text-primary);
-  line-height: 1.5;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
   margin: 0;
   flex: 1;
 }
@@ -739,11 +747,12 @@ html[data-theme="light"] .edu-icon {
 .proj-cat-heading {
   font-family: var(--font-display);
   font-size: 0.92rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-weight: normal;
+  letter-spacing: 0.22em;
+  line-height: 1.4;
   text-transform: uppercase;
   color: var(--accent-hot);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -796,9 +805,10 @@ html[data-theme="light"] .edu-icon {
 .project-name {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
   color: var(--text-primary);
-  letter-spacing: 0.05em;
 }
 .project-desc {
   font-size: 1.02rem;
@@ -848,10 +858,11 @@ html[data-theme="light"] .edu-icon {
 .interest-name {
   font-family: var(--font-display);
   font-size: 0.96rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
   color: var(--text-primary);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.45rem;
 }
 .interest-desc {
   font-size: 1.05rem;
@@ -872,7 +883,7 @@ html[data-theme="light"] .edu-icon {
   background: radial-gradient(ellipse 60% 80% at 50% 100%, oklch(50% 0.24 25 / 0.08), transparent);
   pointer-events: none;
 }
-.contact-banner h2 { font-size: clamp(1.68rem, 3.2vw, 2.38rem); margin-bottom: 0.75rem; }
+.contact-banner h2 { font-size: clamp(1.68rem, 3.2vw, 2.38rem); font-weight: normal; letter-spacing: 0.08em; line-height: 1.35; margin-bottom: 1rem; }
 .contact-banner > .container > p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.15rem; }
 
 /* ── Email Modal ───────────────────────────────────────────── */
