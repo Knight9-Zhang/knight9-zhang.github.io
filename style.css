@@ -4,10 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
-/* ── Custom Font: 优设于飞特健康体 (YouSheYuFeiTe) ─────────────── */
+/* ── Custom Font: 卓特悦动黑 (ZhuoTeYueDongHei) ─────────────── */
 @font-face {
-  font-family: 'YouSheYuFeiTe';
-  src: url('fonts/youshe-yufeite.ttf') format('truetype');
+  font-family: 'ZhuoTeYueDongHei';
+  src: url('fonts/zhuote-yuedonghei.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -33,9 +33,9 @@
   --border:        oklch(22% 0.015 12);
   --border-accent: var(--accent);
 
-  --font-display: 'Orbitron', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", monospace;
-  --font-body:    'Space Grotesk', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", sans-serif;
-  --font-mono:    'Space Mono', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", monospace;
+  --font-display: 'Orbitron', 'ZhuoTeYueDongHei', '卓特悦动黑', "Microsoft YaHei", "微软雅黑", monospace;
+  --font-body:    'Space Grotesk', "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
+  --font-mono:    'Space Mono', "Microsoft YaHei", "微软雅黑", monospace;
 
   --radius-sm: 2px;
   --radius:    4px;
@@ -48,19 +48,25 @@
   --transition-slow: 0.5s  cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Chinese Typography (Latin first, YouSheYuFeiTe for Chinese characters) ─ */
+/* ── Chinese Typography (Headings: 卓特悦动黑 | Body: 微软雅黑) ────── */
 html[lang="zh-CN"],
 html[lang="zh-CN"] body,
 html[lang="zh-CN"] button,
 html[lang="zh-CN"] input,
 html[lang="zh-CN"] textarea {
-  font-family: 'Space Grotesk', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
+  font-family: 'Space Grotesk', "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
 }
 html[lang="zh-CN"] h1,
 html[lang="zh-CN"] h2,
 html[lang="zh-CN"] h3,
-html[lang="zh-CN"] h4 {
-  font-family: 'Orbitron', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", sans-serif;
+html[lang="zh-CN"] h4,
+html[lang="zh-CN"] .section-title,
+html[lang="zh-CN"] .section-label,
+html[lang="zh-CN"] .hero-name,
+html[lang="zh-CN"] .proj-cat-heading,
+html[lang="zh-CN"] .project-name,
+html[lang="zh-CN"] .interest-name {
+  font-family: 'Orbitron', 'ZhuoTeYueDongHei', '卓特悦动黑', "Microsoft YaHei", "微软雅黑", sans-serif;
 }
 html[lang="zh-CN"] .nav-links a,
 html[lang="zh-CN"] .lang-btn,
@@ -69,7 +75,6 @@ html[lang="zh-CN"] .hero-roles .role-badge,
 html[lang="zh-CN"] .social-link,
 html[lang="zh-CN"] .social-btn,
 html[lang="zh-CN"] .btn,
-html[lang="zh-CN"] .section-label,
 html[lang="zh-CN"] .edu-field,
 html[lang="zh-CN"] .skill-cat-title,
 html[lang="zh-CN"] .skill-tag,
@@ -81,7 +86,7 @@ html[lang="zh-CN"] .footer-copy,
 html[lang="zh-CN"] .modal-label,
 html[lang="zh-CN"] .modal-email-addr,
 html[lang="zh-CN"] .copy-btn {
-  font-family: 'Space Mono', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", monospace;
+  font-family: 'Space Mono', "Microsoft YaHei", "微软雅黑", monospace;
 }
 html[lang="zh-CN"] .about-bio,
 html[lang="zh-CN"] .hero-motto,
@@ -91,12 +96,7 @@ html[lang="zh-CN"] .pub-title,
 html[lang="zh-CN"] .project-desc,
 html[lang="zh-CN"] .interest-desc,
 html[lang="zh-CN"] .contact-banner > .container > p {
-  font-family: 'Space Grotesk', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", sans-serif;
-}
-html[lang="zh-CN"] .proj-cat-heading,
-html[lang="zh-CN"] .project-name,
-html[lang="zh-CN"] .interest-name {
-  font-family: 'Orbitron', 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-family: 'Space Grotesk', "Microsoft YaHei", "微软雅黑", sans-serif;
 }
 
 /* ── Light / White Theme ───────────────────────────────────── */
