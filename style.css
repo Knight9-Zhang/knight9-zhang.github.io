@@ -24,9 +24,9 @@
   --border:        oklch(22% 0.015 12);
   --border-accent: var(--accent);
 
-  --font-display: 'Orbitron', monospace;
-  --font-body:    'Space Grotesk', sans-serif;
-  --font-mono:    'Space Mono', monospace;
+  --font-display: 'Orbitron', "Microsoft YaHei", "微软雅黑", monospace;
+  --font-body:    'Space Grotesk', "Microsoft YaHei", "微软雅黑", sans-serif;
+  --font-mono:    'Space Mono', "Microsoft YaHei", "微软雅黑", monospace;
 
   --radius-sm: 2px;
   --radius:    4px;
@@ -37,6 +37,43 @@
 
   --transition:      0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s  cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Chinese Typography (微软雅黑) ────────────────────────── */
+html[lang="zh-CN"],
+html[lang="zh-CN"] body,
+html[lang="zh-CN"] button,
+html[lang="zh-CN"] input,
+html[lang="zh-CN"] textarea {
+  font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
+}
+html[lang="zh-CN"] h1,
+html[lang="zh-CN"] h2,
+html[lang="zh-CN"] h3,
+html[lang="zh-CN"] h4 {
+  font-family: 'Orbitron', "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+html[lang="zh-CN"] .section-title,
+html[lang="zh-CN"] .section-label,
+html[lang="zh-CN"] .hero-motto,
+html[lang="zh-CN"] .hero-roles .role-badge,
+html[lang="zh-CN"] .about-bio,
+html[lang="zh-CN"] .edu-degree,
+html[lang="zh-CN"] .edu-field,
+html[lang="zh-CN"] .skill-cat-title,
+html[lang="zh-CN"] .skill-tag,
+html[lang="zh-CN"] .pub-title,
+html[lang="zh-CN"] .pub-note,
+html[lang="zh-CN"] .pub-status,
+html[lang="zh-CN"] .proj-cat-heading,
+html[lang="zh-CN"] .project-name,
+html[lang="zh-CN"] .project-desc,
+html[lang="zh-CN"] .interest-name,
+html[lang="zh-CN"] .interest-desc,
+html[lang="zh-CN"] .footer-copy,
+html[lang="zh-CN"] .modal-label,
+html[lang="zh-CN"] .copy-btn {
+  font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
 }
 
 /* ── Light / White Theme ───────────────────────────────────── */
