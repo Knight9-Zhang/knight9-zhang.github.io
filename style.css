@@ -86,7 +86,10 @@ html[lang="zh-CN"] .copy-btn {
   font-family: 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
 }
 
-/* 2pt (+2.67px / approx +0.15rem) size bump for all non-heading elements in Chinese */
+/* 2pt (+2.67px / approx +0.15rem) size bump for elements in Chinese */
+html[lang="zh-CN"] .section-title { font-size: clamp(1.78rem, 3.2vw, 2.58rem); }
+html[lang="zh-CN"] .hero-name em { font-size: 0.44em; }
+html[lang="zh-CN"] .contact-banner h2 { font-size: clamp(1.68rem, 3.2vw, 2.38rem); }
 html[lang="zh-CN"] .nav-links a { font-size: 0.85rem; }
 html[lang="zh-CN"] .lang-btn { font-size: 0.8rem; }
 html[lang="zh-CN"] .hero-tag { font-size: 0.85rem; }
@@ -588,14 +591,28 @@ html[data-theme="light"] .hero-avatar {
   transform: translateX(4px);
 }
 .edu-icon {
-  width: 36px; height: 36px;
-  background: oklch(50% 0.24 25 / 0.12);
-  border: 1px solid var(--accent-dim);
-  border-radius: var(--radius-sm);
+  width: 38px; height: 38px;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius);
   display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; color: var(--accent-hot);
+  flex-shrink: 0;
+  padding: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-.edu-icon svg { width: 18px; height: 18px; fill: currentColor; }
+.edu-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.edu-icon svg { width: 100%; height: 100%; fill: currentColor; }
+html[data-theme="light"] .edu-icon {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
 .edu-info { flex: 1; }
 .edu-degree {
   font-family: var(--font-display);
