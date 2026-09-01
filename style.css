@@ -48,7 +48,7 @@
   --transition-slow: 0.5s  cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Chinese Typography (优设于飞特健康体) ────────────────────────── */
+/* ── Chinese Typography (优设于飞特健康体 & 字号放大 2pt) ───────── */
 html[lang="zh-CN"],
 html[lang="zh-CN"] body,
 html[lang="zh-CN"] button,
@@ -68,6 +68,7 @@ html[lang="zh-CN"] .hero-motto,
 html[lang="zh-CN"] .hero-roles .role-badge,
 html[lang="zh-CN"] .about-bio,
 html[lang="zh-CN"] .edu-degree,
+html[lang="zh-CN"] .edu-school,
 html[lang="zh-CN"] .edu-field,
 html[lang="zh-CN"] .skill-cat-title,
 html[lang="zh-CN"] .skill-tag,
@@ -84,6 +85,37 @@ html[lang="zh-CN"] .modal-label,
 html[lang="zh-CN"] .copy-btn {
   font-family: 'YouSheYuFeiTe', '优设于飞特健康体', "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
 }
+
+/* 2pt (+2.67px / approx +0.15rem) size bump for all non-heading elements in Chinese */
+html[lang="zh-CN"] .nav-links a { font-size: 0.85rem; }
+html[lang="zh-CN"] .lang-btn { font-size: 0.8rem; }
+html[lang="zh-CN"] .hero-tag { font-size: 0.85rem; }
+html[lang="zh-CN"] .hero-roles .role-badge { font-size: 0.82rem; }
+html[lang="zh-CN"] .hero-motto { font-size: 1.22rem; }
+html[lang="zh-CN"] .social-link,
+html[lang="zh-CN"] .social-btn { font-size: 0.82rem; }
+html[lang="zh-CN"] .btn { font-size: 0.85rem; }
+html[lang="zh-CN"] .section-label { font-size: 0.85rem; }
+html[lang="zh-CN"] .about-bio { font-size: 1.2rem; }
+html[lang="zh-CN"] .edu-degree { font-size: 0.92rem; }
+html[lang="zh-CN"] .edu-school { font-size: 1.02rem; }
+html[lang="zh-CN"] .edu-field { font-size: 0.95rem; }
+html[lang="zh-CN"] .skill-cat-title { font-size: 0.82rem; }
+html[lang="zh-CN"] .skill-tag { font-size: 0.85rem; }
+html[lang="zh-CN"] .pub-title { font-size: 1.15rem; }
+html[lang="zh-CN"] .pub-note { font-size: 0.96rem; }
+html[lang="zh-CN"] .pub-status { font-size: 0.75rem; }
+html[lang="zh-CN"] .proj-cat-heading { font-size: 0.92rem; }
+html[lang="zh-CN"] .project-name { font-size: 1.05rem; }
+html[lang="zh-CN"] .project-desc { font-size: 1.02rem; }
+html[lang="zh-CN"] .project-tag { font-size: 0.78rem; }
+html[lang="zh-CN"] .interest-name { font-size: 0.96rem; }
+html[lang="zh-CN"] .interest-desc { font-size: 1.05rem; }
+html[lang="zh-CN"] .contact-banner > .container > p { font-size: 1.15rem; }
+html[lang="zh-CN"] .footer-copy { font-size: 0.85rem; }
+html[lang="zh-CN"] .modal-label { font-size: 0.82rem; }
+html[lang="zh-CN"] .modal-email-addr { font-size: 0.95rem; }
+html[lang="zh-CN"] .copy-btn { font-size: 0.78rem; }
 
 /* ── Light / White Theme ───────────────────────────────────── */
 html[data-theme="light"] {
