@@ -13,7 +13,7 @@ Supports seamless **Bilingual Toggle (English / 中文)**, **Light / Dark Theme 
 - 🌐 **Instant Bilingual Toggle (EN / ZH)**: Client-side seamless translation without page reloads using declarative `data-en` and `data-zh` attributes.
 - 🔤 **Hybrid Typography System**:
   - Latin text: *Orbitron* (Headings), *Space Grotesk* (Body), and *Space Mono* (Code / Badges).
-  - Chinese text: Custom embedded *YouSheYuFeiTe (优设于飞特健康体)* with graceful fallback to system fonts.
+  - Chinese text: Custom WOFF2-subset *ZhuoTeYueDongHei (卓特悦动黑)* for headings and *Microsoft YaHei (微软雅黑)* for body copy.
 - 🎓 **Education & Institutional Badges**: Timeline layout with embedded vector SVG institutional logos.
 - 🔬 **Research & Publications**: Clean grid layout with status chips (`Under Review`, `In Progress`, `Learning`, `M.S. Thesis`).
 - 💻 **Categorized Project Showcase**: Modular cards categorized into Genomics, Transcriptomics, Programming, and AI workflows.
@@ -33,8 +33,10 @@ Supports seamless **Bilingual Toggle (English / 中文)**, **Light / Dark Theme 
 │   ├── cau.svg               # Institutional vector emblem (sample)
 │   └── swu.svg               # Institutional vector emblem (sample)
 ├── fonts/
-│   └── youshe-yufeite.ttf    # Embedded Chinese display font
-├── avatar.jpg                # Profile portrait photo
+│   ├── zhuote-yuedonghei-subset.woff2 # Ultra-fast subset Chinese display font (~75 KB)
+│   └── zhuote-yuedonghei.woff2        # Full glyph WOFF2 fallback
+├── avatar.webp               # Optimized WebP profile portrait
+├── avatar.jpg                # Progressive JPEG portrait fallback
 ├── index.html                # Semantic HTML5 structure with bilingual data tags
 ├── style.css                 # OKLCH design tokens, animations, and responsive layout
 ├── script.js                 # Theme toggler, i18n manager, copy handler, scroll reveal
@@ -76,7 +78,7 @@ Open `index.html` and update the content:
 | **Markup** | HTML5 (Semantic, Accessible, SEO-ready) |
 | **Styles** | Modern CSS3 (OKLCH color spaces, CSS Grid, Flexbox, Custom Properties) |
 | **Scripting** | Vanilla ES6+ JavaScript (Zero external libraries) |
-| **Typography** | Google Fonts (*Orbitron*, *Space Grotesk*, *Space Mono*) + Local Custom TTF |
+| **Typography** | Google Fonts (*Orbitron*, *Space Grotesk*, *Space Mono*) + Local WOFF2 Subset |
 | **CI/CD** | GitHub Actions (`actions/deploy-pages@v4`) |
 
 ---

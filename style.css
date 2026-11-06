@@ -2,15 +2,25 @@
    YiChi Zhang — Personal Page  |  EVA Black-Red Theme
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
-
 /* ── Custom Font: 卓特悦动黑 (ZhuoTeYueDongHei) ─────────────── */
+/* Full glyph fallback (only downloaded if a new CJK character outside the page subset is rendered) */
 @font-face {
   font-family: 'ZhuoTeYueDongHei';
-  src: url('fonts/zhuote-yuedonghei.otf') format('opentype');
+  src: url('fonts/zhuote-yuedonghei.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+3000-303F, U+4E00-9FFF, U+FF00-FFEF;
+}
+
+/* Ultra-lightweight page subset (~75 KB) — takes precedence for all current page characters */
+@font-face {
+  font-family: 'ZhuoTeYueDongHei';
+  src: url('fonts/zhuote-yuedonghei-subset.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+2013-2014, U+2026, U+2192-2193, U+2550, U+2665, U+2B21, U+3001-3002, U+4E09, U+4E0D-4E0E, U+4E16, U+4E1A, U+4E2A, U+4E2D, U+4E39-4E3B, U+4E49, U+4E4B, U+4E50, U+4E60, U+4E66, U+4E86, U+4E8E, U+4EA6-4EA7, U+4EBA, U+4ECA, U+4EE5, U+4EF6, U+4EFB, U+4F20, U+4F4D, U+4F51, U+4F53, U+4F59, U+4F5C, U+4F60, U+4FDD, U+4FE1, U+50BB, U+5145, U+514B, U+515A, U+5168, U+5173-5174, U+5177, U+517B, U+5185, U+519C, U+51FA, U+5200, U+5206-5207, U+5229, U+522B, U+5230, U+5236, U+524D, U+5251, U+529B, U+52A0-52A1, U+52A8, U+52E4, U+5305, U+5316, U+5347, U+5355, U+5357, U+5386, U+539F, U+53C8, U+53CA, U+53CC, U+53D1, U+53E3, U+53EA, U+53EF, U+53F2, U+5408, U+540D, U+5411, U+542C, U+544A, U+547C, U+548C, U+54C1, U+559C, U+5668, U+56E0, U+56E7, U+56FD, U+5728, U+575E, U+578B, U+57CE, U+57DF, U+57FA, U+586B, U+5883, U+58EB, U+5907, U+590D, U+5916, U+5927, U+592A, U+5947, U+597D, U+59CB, U+5B50, U+5B57, U+5B66, U+5B87, U+5B9A, U+5B9D-5B9E, U+5BA2, U+5BA4, U+5BB6, U+5BB9, U+5C06, U+5C31, U+5C40, U+5C55, U+5C71, U+5DE5, U+5DEE, U+5E76, U+5E8F, U+5E94, U+5EFA, U+5F00, U+5F02, U+5F0F, U+5F1B, U+5F20, U+5F2F, U+5F53, U+5F55, U+5F71, U+5F84-5F85, U+6001, U+6027, U+606F, U+60F3, U+610F, U+6210-6211, U+6218, U+6253, U+6280, U+628A, U+6295, U+62DB, U+62E9, U+62EC, U+6301, U+6362, U+636E, U+63A2, U+63A5, U+63A7, U+63D0, U+652F, U+653B, U+6559, U+6570, U+6587, U+65B0, U+65B9, U+65C5, U+65E0, U+65F6, U+6613, U+661F, U+662F, U+666F, U+667A, U+6700, U+6709, U+671D, U+671F, U+672C, U+672F, U+673A, U+6742, U+6784, U+6790, U+6797, U+679C, U+67E5, U+6808, U+68C0, U+6A21, U+6A2A, U+6B22, U+6B62-6B63, U+6B96, U+6BD4-6BD5, U+6BDB, U+6CD5, U+6D1E, U+6D41, U+6D45, U+6D4B, U+6D77, U+6DAF, U+6DF1, U+6DF7, U+6E05, U+6E90, U+6F2B, U+70ED, U+7126, U+7231, U+7269, U+7279, U+72B6, U+738B, U+73B0, U+7403, U+7406, U+7410, U+745E, U+751F, U+7528, U+7535, U+755C, U+767D, U+7684, U+76AE, U+76EE, U+76F4, U+770B, U+771F, U+77F3, U+7814, U+7855, U+795E, U+798F, U+79BD, U+79CD, U+79D1, U+7A0B, U+7A76, U+7A7A, U+7A7F, U+7AD9, U+7AEF, U+7B80, U+7B97, U+7BB1, U+7C7B, U+7CFB, U+7D22, U+7E41, U+7EA7, U+7EAA, U+7EC4, U+7EC6, U+7ECF, U+7ED3, U+7ED5, U+7EDC, U+7EDF, U+7EF5, U+7EFF, U+7F16, U+7F51, U+7F72, U+7F8A, U+7FA4, U+7FBD, U+8005, U+8054, U+805A, U+80B2, U+80CC, U+80DE, U+80FD, U+81EA, U+81F3-81F4, U+821F, U+8272, U+82E6, U+82F1, U+83AB, U+83B1, U+83DC, U+8482, U+884C, U+8868, U+8877, U+88C5, U+897F, U+8986, U+89C1, U+89E3, U+8A00, U+8BA1, U+8BBA, U+8BC6, U+8BC9, U+8BED, U+8BFB, U+8BFE, U+8C03, U+8D28, U+8D8A, U+8DA3, U+8DE8, U+8DEF, U+8F6C, U+8F6F, U+8F83, U+8FBE, U+8FC7, U+8FCE, U+8FD0, U+8FD8, U+8FDB, U+9009, U+9014, U+901A, U+9057, U+90AE, U+90E8, U+91CD-91CF, U+9274, U+957F, U+95F9, U+9645, U+9664, U+968F, U+96C6, U+9759, U+97F3, U+9875, U+9879, U+9884, U+9898, U+9A86, U+9A8C, U+9AA8, U+9ABC, U+9ED1, U+FF0C, U+FF1A-FF1B;
 }
 
 /* ── Design Tokens (Dark — default) ───────────────────────── */
@@ -44,8 +54,10 @@
   --shadow-red:  0 0 24px oklch(50% 0.24 25 / 0.25);
   --shadow-card: 0 4px 32px oklch(0% 0 0 / 0.5);
 
-  --transition:      0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.5s  cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-quart:  cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+  --transition:      0.25s var(--ease-out-quart);
+  --transition-slow: 0.55s var(--ease-out-expo);
 }
 
 /* ── Chinese Typography (Headings: 卓特悦动黑 不加粗 | Body: 微软雅黑) ────── */
@@ -284,7 +296,9 @@ a:hover { color: var(--text-primary); }
   transition: width var(--transition);
 }
 .nav-links a:hover { color: var(--text-primary); }
-.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--accent-hot); }
+.nav-links a:hover::after,
+.nav-links a.active::after { width: 100%; }
 
 /* Nav utils group */
 .nav-utils { display: flex; align-items: center; gap: 0.4rem; }
@@ -301,7 +315,7 @@ a:hover { color: var(--text-primary); }
   border-radius: var(--radius-sm);
   color: var(--text-muted);
   cursor: pointer;
-  transition: all var(--transition);
+  transition: border-color var(--transition), color var(--transition), background-color var(--transition), transform var(--transition);
   flex-shrink: 0;
   padding: 0;
 }
@@ -340,7 +354,18 @@ a:hover { color: var(--text-primary); }
   width: 24px;
   height: 2px;
   background: var(--text-primary);
+  transform-origin: center;
   transition: transform var(--transition), opacity var(--transition);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ── Hero ──────────────────────────────────────────────────── */
@@ -467,7 +492,7 @@ a:hover { color: var(--text-primary); }
   text-transform: uppercase;
   padding: 0.7rem 1.5rem;
   border-radius: var(--radius-sm);
-  transition: all var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition), color var(--transition), border-color var(--transition);
   cursor: pointer;
   border: none;
 }
@@ -575,7 +600,7 @@ html[data-theme="light"] .hero-avatar {
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent);
   border-radius: var(--radius);
-  transition: all var(--transition);
+  transition: transform var(--transition), border-left-color var(--transition), box-shadow var(--transition);
 }
 .edu-item:hover {
   border-left-color: var(--accent-hot);
@@ -629,7 +654,7 @@ html[data-theme="light"] .edu-icon {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  transition: all var(--transition);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 .skill-category:hover {
   border-color: var(--accent-dim);
@@ -659,7 +684,7 @@ html[data-theme="light"] .edu-icon {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--text-secondary);
-  transition: all var(--transition);
+  transition: border-color var(--transition), color var(--transition), background-color var(--transition);
 }
 .skill-tag:hover {
   border-color: var(--accent-dim);
@@ -785,7 +810,7 @@ html[data-theme="light"] .edu-icon {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
-  transition: all var(--transition);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -979,7 +1004,7 @@ html[data-theme="light"] .edu-icon {
   background: oklch(50% 0.24 25 / 0.08);
   color: var(--accent-hot);
   cursor: pointer;
-  transition: all var(--transition);
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -1022,8 +1047,16 @@ footer {
 .nerv-corner.br { bottom: 12px; right: 12px; border-bottom: 1px solid var(--accent); border-right: 1px solid var(--accent); }
 
 /* ── Scroll reveal ─────────────────────────────────────────── */
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.reveal.visible { opacity: 1; transform: none; }
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
 
 /* ── Responsive ────────────────────────────────────────────── */
 @media (max-width: 900px) {
@@ -1037,7 +1070,7 @@ footer {
 
 @media (max-width: 680px) {
   .nav-links {
-    display: none;
+    display: flex;
     position: fixed;
     top: 68px; left: 0; right: 0;
     background: color-mix(in oklch, var(--bg-void) 96%, transparent);
@@ -1045,8 +1078,18 @@ footer {
     flex-direction: column;
     gap: 0;
     border-bottom: 1px solid var(--border);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate3d(0, -10px, 0);
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
   }
-  .nav-links.open { display: flex; }
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate3d(0, 0, 0);
+  }
   .nav-links li a { display: block; padding: 1.1rem 1.5rem; border-bottom: 1px solid var(--border); font-size: 0.8rem; }
   .nav-links a::after { display: none; }
   .nav-toggle { display: flex; }
@@ -1055,5 +1098,17 @@ footer {
   .pub-entry { grid-template-columns: 44px 1fr; gap: 1rem; }
   .pub-index { font-size: 1.4rem; }
   .pub-header { flex-direction: column; gap: 0.4rem; }
+}
+
+/* ── Accessibility: Reduced Motion ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
 }
 
