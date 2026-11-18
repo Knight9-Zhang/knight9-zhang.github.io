@@ -216,4 +216,4 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
 // ── Console Easter egg ────────────────────────────────────
 console.log('%c YiChi Zhang ', 'background:#c0392b;color:#fff;font-size:18px;font-family:monospace;padding:4px 12px;border-radius:2px;');
 console.log('%c Knight9-Zhang · Researcher & Developer ', 'color:#888;font-family:monospace;font-size:12px;');
-console.log('%c \'王朝可复亦可覆\' ', 'color:#c0392b;font-family:monospace;font-size:11px;');
+console.log('%c \'斩断昔日旧枷锁 今日方知我是我\' ', 'color:#c0392b;font-family:monospace;font-size:11px;');
